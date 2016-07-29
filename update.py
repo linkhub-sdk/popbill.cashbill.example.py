@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# code for console Encoding difference. Dont' mind on it 
+# code for console Encoding difference. Dont' mind on it
 import sys
 import imp
 imp.reload(sys)
@@ -20,17 +20,20 @@ try:
                         tradeType = "승인거래", # 현금영수증 형태, '승인거래'/'취소거래'
                         tradeUsage = "소득공제용", # 거래유형, '소득공제용'/'지출증빙용'
                         taxationType = "과세", # 과세형태, '과세'/'비과세'
-                        
-                        identityNum = "01011112222", # 거래처 식별번호
-                        # 거래유형이 '소득공제용' - 주민등록/핸드폰/카드 번호 입력 
-                        # 거래유형이 '지출증빙용' - 사업자번호 기재
-                        
+
+                        # 거래처 식별번호
+                        # 거래유형이 '지출증빙용' - [휴대폰/카드/주민등록/사업자] 번호 입력
+                        # 거래유형이 '소득공제용' - [휴대폰/카드/주민등록] 번호 입력
+                        # 자진발급 "010-000-1234" 의 경우 "소득공제용"으로만 발급 가능
+                        identityNum = "01011112222",
+
+
                         franchiseCorpNum = "1234567890", # 발행자 사업자번호
-                        franchiseCorpName = "발행자 상호_수정", 
+                        franchiseCorpName = "발행자 상호_수정",
                         franchiseCEOName = "발행 대표자 성명_수정",
                         franchiseAddr = "발행자 주소",
                         franchiseTEL = "07075103710",
-                        
+
                         smssendYN = False, # SMS 전송 여부
                         customerName = "고객명",
                         itemName = "상품명",
@@ -38,7 +41,7 @@ try:
                         email = "test@test.com",
                         hp = "01043255117",
                         fax = "07075103710",
-                        
+
                         supplyCost = "15000", # 공급가액
                         tax = "5000", # 세액
                         serviceFee = "0", # 봉사료
@@ -49,6 +52,6 @@ try:
     result = cashbillService.update(testValue.testCorpNum,MgtKey,cashbill)
 
     print("처리결과 : [%d] %s" % (result.code,result.message))
-    
+
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code , PE.message))
