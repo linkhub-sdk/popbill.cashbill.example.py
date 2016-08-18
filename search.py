@@ -20,13 +20,13 @@ try:
     DType = "R"
 
     # 시작일자, 표시형식(yyyyMMdd)
-    SDate = "20160601"
+    SDate = "20160701"
 
     # 종료일자, 표시형식(yyyyMMdd)
     EDate = "20160831"
 
     #상태코드 배열, 2,3번째 자리에 와일드카드(*) 사용 가능
-    State = ["3**"]
+    State = ["3**", "4**"]
 
     # 현금영수증 형태, N-일반 현금영수증, C-취소 현금영수증
     TradeType = ["N", "C"]
@@ -46,7 +46,10 @@ try:
     # 정렬방향, D-내림차순, A-오름차순
     Order = "D"
 
-    response = cashbillService.search(testValue.testCorpNum, DType, SDate, EDate, State, TradeType, TradeUsage, TaxationType, Page, PerPage, Order, testValue.testUserID)
+    # 현금영수증 식별번호, 미기재시 전체조회
+    QString = ""
+
+    response = cashbillService.search(testValue.testCorpNum, DType, SDate, EDate, State, TradeType, TradeUsage, TaxationType, Page, PerPage, Order, testValue.testUserID, QString)
 
     print("code (응답코드) : %s " % response.code)
     print("message (응답메시지) : %s " % response.message)
