@@ -8,22 +8,35 @@ except Exception as E: pass
 
 import testValue
 
-from popbill import CashbillService,PopbillException
+from popbill import CashbillService, PopbillException
 
-cashbillService =  CashbillService(testValue.LinkID,testValue.SecretKey)
+cashbillService =  CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
 
+'''
+검색조건을 사용하여 현금영수증 목록을 조회합니다.
+- 응답항목에 대한 자세한 사항은 "[현금영수증 API 연동매뉴얼] > 4.2. 현금영수증 상태정보 구성" 을
+  참조하시기 바랍니다.
+'''
+
 try:
-    print("=" * 15 + " 목록 조회 " + "=" * 15)
+    print("=" * 15 + " 현금영수증 목록 조회 " + "=" * 15)
+
+    # 팝빌회원 사업자번호
+    CorpNum = testValue.testCorpNum
+
+    #팝빌회원 아이디
+    UserID = testValue.testUserID
+
 
     # 조회 일자유형, R-등록일자, T-거래일자, I-발행일자
     DType = "R"
 
     # 시작일자, 표시형식(yyyyMMdd)
-    SDate = "20160701"
+    SDate = "20161001"
 
     # 종료일자, 표시형식(yyyyMMdd)
-    EDate = "20160831"
+    EDate = "20161131"
 
     #상태코드 배열, 2,3번째 자리에 와일드카드(*) 사용 가능
     State = ["3**", "4**"]
@@ -49,7 +62,8 @@ try:
     # 현금영수증 식별번호, 미기재시 전체조회
     QString = ""
 
-    response = cashbillService.search(testValue.testCorpNum, DType, SDate, EDate, State, TradeType, TradeUsage, TaxationType, Page, PerPage, Order, testValue.testUserID, QString)
+    response = cashbillService.search(CorpNum, DType, SDate, EDate, State, TradeType,
+        TradeUsage, TaxationType, Page, PerPage, Order, UserID, QString)
 
     print("code (응답코드) : %s " % response.code)
     print("message (응답메시지) : %s " % response.message)
@@ -64,7 +78,7 @@ try:
         for key, value in info.__dict__.items():
             print("%s : %s" % (key, value))
         i += 1
-        print()
+        print
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code , PE.message))

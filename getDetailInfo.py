@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# code for console Encoding difference. Dont' mind on it 
+# code for console Encoding difference. Dont' mind on it
 import sys
 import imp
 imp.reload(sys)
@@ -8,18 +8,27 @@ except Exception as E: pass
 
 import testValue
 
-from popbill import CashbillService,PopbillException
+from popbill import CashbillService, PopbillException
 
-cashbillService =  CashbillService(testValue.LinkID,testValue.SecretKey)
+cashbillService =  CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
 
+'''
+현금영수증 1건의 상세정보를 조회합니다.
+- 응답항목에 대한 자세한 사항은 "[현금영수증 API 연동매뉴얼] > 4.1. 현금영수증 구성" 을
+  참조하시기 바랍니다.
+'''
+
 try:
-    print("현금영수증 상세정보 확인")
-    
-    MgtKey = "20150326-01" #현금영수증 문서관리번호, 1~24자리, 영문,숫자,-,_ 조합으로 공급자별 고유번호 생성
- 
-    #현금영수증 임시저장시 구성한 정보를 반환한다.
-    cashbill = cashbillService.getDetailInfo(testValue.testCorpNum,MgtKey)
+    print("=" * 15 + " 현금영수증 상세정보 확인 " + "=" * 15)
+
+    # 팝빌회원 사업자번호
+    CorpNum = testValue.testCorpNum
+
+    # 현금영수증 문서관리번호
+    MgtKey = "20161118-01"
+
+    cashbill = cashbillService.getDetailInfo(CorpNum, MgtKey)
 
     print ("mgtKey : %s" % (cashbill.mgtKey))
     print ("orgConfirmNum : %s" % (cashbill.orgConfirmNum))
@@ -31,7 +40,7 @@ try:
     print ("tax : %s" % (cashbill.tax))
     print ("serviceFee : %s" % (cashbill.serviceFee))
     print ("totalAmount : %s" % (cashbill.totalAmount))
-    
+
     print ("franchiseCorpNum : %s" % (cashbill.franchiseCorpNum))
     print ("franchiseCorpName : %s" % (cashbill.franchiseCorpName))
     print ("franchiseCEOName : %s" % (cashbill.franchiseCEOName))

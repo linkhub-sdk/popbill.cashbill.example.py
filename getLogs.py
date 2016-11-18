@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# code for console Encoding difference. Dont' mind on it 
+# code for console Encoding difference. Dont' mind on it
 import sys
 import imp
 imp.reload(sys)
@@ -12,31 +12,27 @@ from popbill import CashbillService,PopbillException
 
 cashbillService =  CashbillService(testValue.LinkID,testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
-  
-try:
-    print("현금영수증 처리이력 목록")
-    
-    MgtKey = "20150326-04" # 현금영수증 문서관리번호
-   
-    LogList = cashbillService.getLogs(testValue.testCorpNum,MgtKey)
 
-    ''' CashbillLog 구성: 
-            docLogType : 이력유형
-            log : 문서이력 설명
-            procType : 처리유형
-            procCorpName : 처리회사명
-            procMemo : 처리시 메모
-            regDT : 처리일시
-    '''
+try:
+    print("=" * 15 + " 현금영수증 상태변경 이력 " + "=" * 15)
+
+    # 팝빌회원 사업자번호
+    CorpNum = testValue.testCorpNum
+
+    # 현금영수증 문서관리번호
+    MgtKey = "20161118-01"
+
+    LogList = cashbillService.getLogs(CorpNum, MgtKey)
+
     i = 1
     for f in LogList:
         print("%d:" % i)
-        print("    docLogType : %s" % f.docLogType)
-        print("    log : %s" % f.log)
-        print("    procType : %s" % f.procType)
-        print("    procCorpName : %s" % f.procCorpName)
-        print("    procMemo : %s" % f.procMemo)
-        print("    regDT : %s" % f.regDT)
+        print("    docLogType(이력유형) : %s" % f.docLogType)
+        print("    log(문서이력 설명) : %s" % f.log)
+        print("    procType(처리유형) : %s" % f.procType)
+        print("    procCorpName(회사명) : %s" % f.procCorpName)
+        print("    procMemo(처리메모) : %s" % f.procMemo)
+        print("    regDT(처리일시) : %s" % f.regDT)
         i += 1
 
 except PopbillException as PE:

@@ -8,10 +8,14 @@ except Exception as E: pass
 
 import testValue
 
-from popbill import CashbillService,PopbillException
+from popbill import CashbillService, PopbillException
 
-cashbillService =  CashbillService(testValue.LinkID,testValue.SecretKey)
+cashbillService =  CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
+
+'''
+팝빌 회원아이디 중복여부를 확인합니다.
+'''
 
 try:
     print("=" * 15 + " 회원아이디 중복확인 " + "=" * 15)

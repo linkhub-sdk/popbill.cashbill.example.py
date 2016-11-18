@@ -8,29 +8,32 @@ except Exception as E: pass
 
 import testValue
 
-from popbill import CashbillService,PopbillException
+from popbill import CashbillService, PopbillException
 
-cashbillService =  CashbillService(testValue.LinkID,testValue.SecretKey)
+cashbillService =  CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
+
+'''
+연동회원의 회사정보를 확인합니다.
+'''
 
 try:
     print("=" * 15 + " 회사정보 확인 " + "=" * 15)
 
-    ''' CorpInfo 구성
-                ceoname     (대표자 성명)
-                corpName    (상호)
-                addr        (주소)
-                bizType     (업태)
-                bizClass    (종목)
-    '''
+    # 팝빌회원 사업자번호
+    CorpNum = testValue.testCorpNum
 
-    response = cashbillService.getCorpInfo(testValue.testCorpNum, testValue.testUserID)
+    # 팝빌회원 아이디
+    UserID = testValue.testUserID
 
-    tmp = "ceonaem : " + response.ceoname + "\n"
-    tmp += "corpName : " + response.corpName + "\n"
-    tmp += "addr : " + response.addr + "\n"
-    tmp += "bizType : " + response.bizType + "\n"
-    tmp += "bizClass : " + response.bizClass + "\n"
+    response = cashbillService.getCorpInfo(CorpNum, UserID)
+
+    tmp = "ceonaem(대표자성명) : " + response.ceoname + "\n"
+    tmp += "corpName(상호) : " + response.corpName + "\n"
+    tmp += "addr(주소) : " + response.addr + "\n"
+    tmp += "bizType(업태) : " + response.bizType + "\n"
+    tmp += "bizClass(종목) : " + response.bizClass + "\n"
+
     print(tmp);
 
 except PopbillException as PE:
