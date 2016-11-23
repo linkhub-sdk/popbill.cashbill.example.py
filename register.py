@@ -8,9 +8,9 @@ except Exception as E: pass
 
 import testValue
 
-from popbill import Cashbill,CashbillService,PopbillException
+from popbill import Cashbill, CashbillService, PopbillException
 
-cashbillService =  CashbillService(testValue.LinkID,testValue.SecretKey)
+cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
 
 '''
@@ -32,7 +32,7 @@ try:
     cashbill = Cashbill (
 
         # 문서관리번호, 1~24자리, 영문,숫자,-,_ 조합으로 사업자별로 중복되지 않도록 구성
-        mgtKey = "20161118-01",
+        mgtKey = "20161123-03",
 
         # 현금영수증 형태, '승인거래'/'취소거래'
         tradeType = "승인거래",
@@ -47,7 +47,7 @@ try:
         # 거래유형이 '지출증빙용' - [휴대폰/카드/주민등록/사업자] 번호 입력
         # 거래유형이 '소득공제용' - [휴대폰/카드/주민등록] 번호 입력
         # 자진발급 "010-000-1234" 의 경우 "소득공제용"으로만 발급 가능
-        identityNum = "6798700433",
+        identityNum = "0100001234",
 
         # 공급가액
         supplyCost = "15000",

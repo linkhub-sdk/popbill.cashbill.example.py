@@ -8,9 +8,9 @@ except Exception as E: pass
 
 import testValue
 
-from popbill import ContactInfo,CashbillService,PopbillException
+from popbill import ContactInfo, CashbillService, PopbillException
 
-cashbillService =  CashbillService(testValue.LinkID,testValue.SecretKey)
+cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
 
 '''
@@ -33,7 +33,7 @@ try:
         id = "testkorea_1117",
 
         # 비밀번호
-        pwd = "this_is_password",
+        pwd = "thisispassword",
 
         # 담당자명
         personName = "정대리",
@@ -57,6 +57,6 @@ try:
     result = cashbillService.registContact(CorpNum, newContact, UserID)
 
     print("처리결과 : [%d] %s" % (result.code,result.message))
-    
+
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code , PE.message))

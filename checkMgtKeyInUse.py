@@ -10,7 +10,7 @@ import testValue
 
 from popbill import CashbillService, PopbillException
 
-cashbillService =  CashbillService(testValue.LinkID, testValue.SecretKey)
+cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
 
 '''
@@ -25,11 +25,11 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 현금영수증 문서관리번호, 1~24자리, 영문,숫자,-,_ 조합으로 공급자별 고유번호 생성
-    MgtKey = "20161118-01"
+    MgtKey = "20161122-01"
 
     bIsInUse = cashbillService.checkMgtKeyInUse(CorpNum, MgtKey)
 
-    print("사용여부 : %s" % "사용중" if bIsInUse else '미사용중')
+    print("사용여부 : 사용중" if bIsInUse else "사용여부 : 미사용중")
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code , PE.message))

@@ -8,9 +8,9 @@ except Exception as E: pass
 
 import testValue
 
-from popbill import Cashbill,CashbillService,PopbillException
+from popbill import Cashbill, CashbillService, PopbillException
 
-cashbillService =  CashbillService(testValue.LinkID,testValue.SecretKey)
+cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
 
 '''
@@ -27,13 +27,13 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 수정하고자하는 현금영수증 문서관리번호
-    MgtKey = '20161118-01'
+    MgtKey = '20161123-03'
 
     # 현금영수증 정보
     cashbill = Cashbill (
 
         # 문서관리번호, 1~24자리, 영문,숫자,-,_ 조합으로 사업자별로 중복되지 않도록 구성
-        mgtKey = "20161118-01",
+        mgtKey = "20161123-01",
 
         # 현금영수증 형태, '승인거래'/'취소거래'
         tradeType = "승인거래",

@@ -8,9 +8,9 @@ except Exception as E: pass
 
 import testValue
 
-from popbill import CashbillService,PopbillException
+from popbill import CashbillService, PopbillException
 
-cashbillService =  CashbillService(testValue.LinkID,testValue.SecretKey)
+cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
 
 '''
@@ -25,7 +25,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 현금영수증 문서관리번호
-    MgtKey = "20161118-01"
+    MgtKey = "20161123-01"
 
     # 팝빌회원 아이디
     UserID = testValue.testUserID
@@ -33,6 +33,6 @@ try:
     url = cashbillService.getPrintURL(CorpNum, MgtKey, UserID)
 
     print("URL: %s" % url)
-    
+
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code , PE.message))

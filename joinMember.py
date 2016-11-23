@@ -8,9 +8,9 @@ except Exception as E: pass
 
 import testValue
 
-from popbill import JoinForm,CashbillService,PopbillException
+from popbill import JoinForm, CashbillService, PopbillException
 
-cashbillService =  CashbillService(testValue.LinkID,testValue.SecretKey)
+cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
 
 '''
@@ -24,13 +24,13 @@ try:
     newMember = JoinForm(
 
         # 회원아이디, 최대 20자
-        ID = "testkorea1118",
+        ID = "testkorea1123",
 
         # 비밀번호, 최대 20자
-        PWD = "testPasswodrd",
+        PWD = "testpasswodrd",
 
         # 사업자번호
-        CorpNum = "0000000101",
+        CorpNum = "0000000102",
 
         # 상호
         CorpName = "테스트가입상호",

@@ -10,7 +10,7 @@ import testValue
 
 from popbill import CashbillService, PopbillException
 
-cashbillService =  CashbillService(testValue.LinkID, testValue.SecretKey)
+cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
 
 '''
@@ -28,7 +28,7 @@ try:
 
     response = cashbillService.getCorpInfo(CorpNum, UserID)
 
-    tmp = "ceonaem(대표자성명) : " + response.ceoname + "\n"
+    tmp = "ceoname(대표자성명) : " + response.ceoname + "\n"
     tmp += "corpName(상호) : " + response.corpName + "\n"
     tmp += "addr(주소) : " + response.addr + "\n"
     tmp += "bizType(업태) : " + response.bizType + "\n"

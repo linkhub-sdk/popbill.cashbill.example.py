@@ -10,7 +10,7 @@ import testValue
 
 from popbill import CashbillService, PopbillException
 
-cashbillService =  CashbillService(testValue.LinkID, testValue.SecretKey)
+cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
 
 '''
@@ -25,7 +25,6 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 팝빌회원 아이디
-
     UserID = testValue.testUserID
 
     # LOGIN-팝빌 로그인, CHRG-포인트충전

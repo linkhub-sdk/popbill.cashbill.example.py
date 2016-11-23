@@ -8,14 +8,14 @@ except Exception as E: pass
 
 import testValue
 
-from popbill import CashbillService,PopbillException
+from popbill import CashbillService, PopbillException
 
-cashbillService =  CashbillService(testValue.LinkID, testValue.SecretKey)
+cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
 
 '''
 현금영수증 인쇄(공급받는자) URL을 반환합니다.
-- URL 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
+- 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
 '''
 
 try:

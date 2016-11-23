@@ -10,7 +10,7 @@ import testValue
 
 from popbill import CashbillService, PopbillException
 
-cashbillService =  CashbillService(testValue.LinkID, testValue.SecretKey)
+cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
 
 '''
@@ -33,7 +33,7 @@ try:
     # 팝빌회원 아이디
     UserID = testValue.testUserID
 
-    url = cashbillService.getMassPrintURL(testValue.testCorpNum,MgtKeyList,UserID)
+    url = cashbillService.getMassPrintURL(CorpNum, MgtKeyList, UserID)
 
     print("URL: %s" % url)
 except PopbillException as PE:

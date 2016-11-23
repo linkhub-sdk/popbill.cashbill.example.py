@@ -8,10 +8,14 @@ except Exception as E: pass
 
 import testValue
 
-from popbill import CorpInfo ,CashbillService,PopbillException
+from popbill import CorpInfo, CashbillService, PopbillException
 
-cashbillService =  CashbillService(testValue.LinkID,testValue.SecretKey)
+cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
+
+'''
+회사정보를 수정합니다.
+'''
 
 try:
     print("=" * 15 + " 회사정보 수정 " + "=" * 15)

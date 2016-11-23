@@ -8,9 +8,9 @@ except Exception as E: pass
 
 import testValue
 
-from popbill import ContactInfo,CashbillService,PopbillException
+from popbill import ContactInfo, CashbillService, PopbillException
 
-cashbillService =  CashbillService(testValue.LinkID,testValue.SecretKey)
+cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
 
 '''

@@ -8,9 +8,9 @@ except Exception as E: pass
 
 import testValue
 
-from popbill import CashbillService,PopbillException
+from popbill import CashbillService, PopbillException
 
-cashbillService =  CashbillService(testValue.LinkID, testValue.SecretKey)
+cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
 
 '''
@@ -26,10 +26,10 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 현금영수증 문서관리번호
-    MgtKey = "20150326-01"
+    MgtKey = "20161123-01"
 
     # 발신번호
-    Sender = "07075103710"
+    Sender = "07043042991"
 
     # 수신번호
     Receiver = "010111222"

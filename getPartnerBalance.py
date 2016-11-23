@@ -10,7 +10,7 @@ import testValue
 
 from popbill import CashbillService, PopbillException
 
-cashbillService =  CashbillService(testValue.LinkID, testValue.SecretKey)
+cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
 
 '''
@@ -25,7 +25,7 @@ try:
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
 
-    balance = cashbillService.getPartnerBalance(testValue.testCorpNum)
+    balance = cashbillService.getPartnerBalance(CorpNum)
 
     print("파트너 잔여포인트 : %d" % balance)
 

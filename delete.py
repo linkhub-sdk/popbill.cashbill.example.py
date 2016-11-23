@@ -10,7 +10,7 @@ import testValue
 
 from popbill import CashbillService, PopbillException
 
-cashbillService =  CashbillService(testValue.LinkID, testValue.SecretKey)
+cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
 
 '''
@@ -26,9 +26,9 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 현금영수증 문서관리번호
-    MgtKey = "20161118-01"
+    MgtKey = "20161122-01"
 
-    result = cashbillService.delete(testValue.testCorpNum,MgtKey)
+    result = cashbillService.delete(CorpNum, MgtKey)
     print("처리결과 : [%d] %s" % (result.code,result.message))
 
 except PopbillException as PE:
