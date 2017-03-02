@@ -27,10 +27,7 @@ try:
     # 현금영수증 문서관리번호
     MgtKey = "20161118-01"
 
-    # 팝빌회원 아이디
-    UserID = testValue.testUserID
-
-    url = cashbillService.getMailURL(CorpNum, MgtKey, UserID)
+    url = cashbillService.getMailURL(CorpNum, MgtKey)
 
     print("URL: %s" % url)
 

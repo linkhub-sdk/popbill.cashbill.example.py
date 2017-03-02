@@ -25,12 +25,9 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 현금영수증 문서관리번호
-    MgtKey = "20161118-01"
+    MgtKey = "20150326-01"
 
-    # 팝빌회원 아이디
-    UserID = testValue.testUserID
-
-    url = cashbillService.getEPrintURL(CorpNum, MgtKey, UserID)
+    url = cashbillService.getEPrintURL(CorpNum, MgtKey)
     print("URL: %s" % url)
 
 except PopbillException as PE:

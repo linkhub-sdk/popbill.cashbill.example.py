@@ -30,10 +30,7 @@ try:
     MgtKeyList.append("20161118-02")
     MgtKeyList.append("20161118-03")
 
-    # 팝빌회원 아이디
-    UserID = testValue.testUserID
-
-    url = cashbillService.getMassPrintURL(CorpNum, MgtKeyList, UserID)
+    url = cashbillService.getMassPrintURL(CorpNum, MgtKeyList)
 
     print("URL: %s" % url)
 except PopbillException as PE:
