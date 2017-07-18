@@ -27,7 +27,7 @@ try:
 
     # 현금영수증 문서관리번호 배열, 최대 1000건
     MgtKeyList = []
-    MgtKeyList.append("20161118-01")
+    MgtKeyList.append("20170718-04")
     MgtKeyList.append("20161118-02")
     MgtKeyList.append("20161118-03")
 

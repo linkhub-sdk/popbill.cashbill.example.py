@@ -26,7 +26,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 현금영수증 문서관리번호
-    MgtKey = "20170329-03"
+    MgtKey = "20170718-04"
 
     cashbillInfo = cashbillService.getInfo(CorpNum, MgtKey)
 

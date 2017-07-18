@@ -3,8 +3,8 @@
 '''
  팝빌 현금영수증 API Python SDK Example
  - Python SDK 연동환경 설정방법 안내 : http://blog.linkhub.co.kr/581
- - 업데이트 일자 : 2017-05-24
- - 연동 기술지원 연락처 : 1600-8536 / 070-4304-2991
+ - 업데이트 일자 : 2017-07-18
+ - 연동 기술지원 연락처 : 1600-9854 / 070-4304-2991
  - 연동 기술지원 이메일 : code@linkhub.co.kr
  <테스트 연동개발 준비사항>
  1) 16, 19번 라인에 선언된 링크아이디(LinkID)와 비밀키(SecretKey)를
@@ -18,7 +18,7 @@ LinkID = 'TESTER'
 # 비밀키
 SecretKey = 'SwWxqU+0TErBXy/9TVjIPEnI0VTUMMSQZtJf3Ed8q3I='
 
-#연동환경 설정값, 개발용(True), 상업용(False)
+# 연동환경 설정값, 개발용(True), 상업용(False)
 IsTest = True
 
 # 테스트 회원 사업자번호
