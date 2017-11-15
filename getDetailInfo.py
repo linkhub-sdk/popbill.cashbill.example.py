@@ -26,7 +26,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 현금영수증 문서관리번호
-    MgtKey = "20161118-01"
+    MgtKey = "20171115-01"
 
     cashbill = cashbillService.getDetailInfo(CorpNum, MgtKey)
 
@@ -54,6 +54,9 @@ try:
     print ("email (고객 이메일) : %s" % (cashbill.email))
     print ("hp (고객 휴대폰번호) : %s" % (cashbill.hp))
     print ("smssendYN (알림문자 전송여부) : %s" % (cashbill.smssendYN))
+    print ("orgConfirmNum (원본현금영수증 승인번호) : %s" % (cashbill.orgConfirmNum))
+    print ("orgTradeDate (원본현금영수증 거래일자) : %s" % (cashbill.orgTradeDate))
+    print ("cancelType (취소사유) : %s" % (cashbill.cancelType))
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code , PE.message))
