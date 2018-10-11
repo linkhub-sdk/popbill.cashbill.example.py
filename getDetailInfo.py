@@ -2,9 +2,12 @@
 # code for console Encoding difference. Dont' mind on it
 import sys
 import imp
+
 imp.reload(sys)
-try: sys.setdefaultencoding('UTF8')
-except Exception as E: pass
+try:
+    sys.setdefaultencoding('UTF8')
+except Exception as E:
+    pass
 
 import testValue
 
@@ -30,33 +33,32 @@ try:
 
     cashbill = cashbillService.getDetailInfo(CorpNum, MgtKey)
 
-    print ("mgtKey (현금영수증 문서관리번호) : %s" % (cashbill.mgtKey))
-    print ("confirmNum (국세청승인번호) : %s" % (cashbill.confirmNum))
-    print ("tradeDate (거래일자): %s" % (cashbill.tradeDate))
-    print ("tradeUsage (거래유형) : %s" % (cashbill.tradeUsage))
-    print ("tradeType (현금영수증 형태) : %s" % (cashbill.tradeType))
-    print ("taxationType (과세형태) : %s" % (cashbill.taxationType))
-    print ("supplyCost (공급가액) : %s" % (cashbill.supplyCost))
-    print ("tax (세액) : %s" % (cashbill.tax))
-    print ("serviceFee (봉사료) : %s" % (cashbill.serviceFee))
-    print ("totalAmount (거래금액) : %s" % (cashbill.totalAmount))
-
-    print ("franchiseCorpNum (발행자 사업자번호) : %s" % (cashbill.franchiseCorpNum))
-    print ("franchiseCorpName (발행자 상호) : %s" % (cashbill.franchiseCorpName))
-    print ("franchiseCEOName (발행자 대표자 성명) : %s" % (cashbill.franchiseCEOName))
-    print ("franchiseAddr (발행자 주소) : %s" % (cashbill.franchiseAddr))
-    print ("franchiseTEL (발행자 연락처) : %s" % (cashbill.franchiseTEL))
-
-    print ("identityNum (거래처 식별번호) : %s" % (cashbill.identityNum))
-    print ("customerName (고객명) : %s" % (cashbill.customerName))
-    print ("itemName (상품명) : %s" % (cashbill.itemName))
-    print ("orderNumber (주문번호) : %s" % (cashbill.orderNumber))
-    print ("email (고객 이메일) : %s" % (cashbill.email))
-    print ("hp (고객 휴대폰번호) : %s" % (cashbill.hp))
-    print ("smssendYN (알림문자 전송여부) : %s" % (cashbill.smssendYN))
-    print ("orgConfirmNum (원본현금영수증 승인번호) : %s" % (cashbill.orgConfirmNum))
-    print ("orgTradeDate (원본현금영수증 거래일자) : %s" % (cashbill.orgTradeDate))
-    print ("cancelType (취소사유) : %s" % (cashbill.cancelType))
+    print("mgtKey (현금영수증 문서관리번호) : %s" % (cashbill.mgtKey))
+    print("confirmNum (국세청승인번호) : %s" % (cashbill.confirmNum))
+    print("orgConfirmNum (원본현금영수증 승인번호) : %s" % (cashbill.orgConfirmNum))
+    print("orgTradeDate (원본현금영수증 거래일자) : %s" % (cashbill.orgTradeDate))
+    print("tradeDate (거래일자): %s" % (cashbill.tradeDate))
+    print("tradeType (문서형태) : %s" % (cashbill.tradeType))
+    print("tradeUsage (거래구분) : %s" % (cashbill.tradeUsage))
+    print("tradeOpt (거래유형) : %s" % (cashbill.tradeOpt))
+    print("taxationType (과세형태) : %s" % (cashbill.taxationType))
+    print("totalAmount (거래금액) : %s" % (cashbill.totalAmount))
+    print("supplyCost (공급가액) : %s" % (cashbill.supplyCost))
+    print("tax (부가세) : %s" % (cashbill.tax))
+    print("serviceFee (봉사료) : %s" % (cashbill.serviceFee))
+    print("franchiseCorpNum (가맹점 사업자번호) : %s" % (cashbill.franchiseCorpNum))
+    print("franchiseCorpName (가맹점 상호) : %s" % (cashbill.franchiseCorpName))
+    print("franchiseCEOName (가맹점 대표자 성명) : %s" % (cashbill.franchiseCEOName))
+    print("franchiseAddr (가맹점 주소) : %s" % (cashbill.franchiseAddr))
+    print("franchiseTEL (가맹점 연락처) : %s" % (cashbill.franchiseTEL))
+    print("identityNum (거래처 식별번호) : %s" % (cashbill.identityNum))
+    print("customerName (주문자명) : %s" % (cashbill.customerName))
+    print("itemName (주문상품명) : %s" % (cashbill.itemName))
+    print("orderNumber (주문번호) : %s" % (cashbill.orderNumber))
+    print("email (이메일) : %s" % (cashbill.email))
+    print("hp (휴대폰번호) : %s" % (cashbill.hp))
+    print("smssendYN (SMS 전송여부) : %s" % (cashbill.smssendYN))
+    print("cancelType (취소사유) : %s" % (cashbill.cancelType))
 
 except PopbillException as PE:
-    print("Exception Occur : [%d] %s" % (PE.code , PE.message))
+    print("Exception Occur : [%d] %s" % (PE.code, PE.message))

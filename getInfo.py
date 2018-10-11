@@ -2,9 +2,12 @@
 # code for console Encoding difference. Dont' mind on it
 import sys
 import imp
+
 imp.reload(sys)
-try: sys.setdefaultencoding('UTF8')
-except Exception as E: pass
+try:
+    sys.setdefaultencoding('UTF8')
+except Exception as E:
+    pass
 
 import testValue
 
@@ -30,31 +33,30 @@ try:
 
     cashbillInfo = cashbillService.getInfo(CorpNum, MgtKey)
 
-    print ("itemKey (아이템키) : %s" % (cashbillInfo.itemKey))
-    print ("mgtKey (문서관리번호) : %s" % (cashbillInfo.mgtKey))
-    print ("tradeDate (거래일자) : %s" % (cashbillInfo.tradeDate))
-    print ("issueDT (발행일시) : %s" % (cashbillInfo.issueDT))
-    print ("regDT (등록일시) : %s" % (cashbillInfo.regDT))
-    print ("taxationType (과세형태) : %s" % (cashbillInfo.taxationType))
-    print ("totalAmount (거래금액) : %s" % (cashbillInfo.totalAmount))
-    print ("tradeUsage (거래용도) : %s" % (cashbillInfo.tradeUsage))
-    print ("tradeType (현금영수증형태) : %s" % (cashbillInfo.tradeType))
-    print ("stateCode (상태코드) : %s" % (cashbillInfo.stateCode))
-    print ("stateDT (상태변경일시) : %s" % (cashbillInfo.stateDT))
-
-    print ("identityNum (거래처 식별번호) : %s" % (cashbillInfo.identityNum))
-    print ("itemName (상품명) : %s" % (cashbillInfo.itemName))
-    print ("customerName (고객명) : %s" % (cashbillInfo.customerName))
-
-    print ("confirmNum (국세청 승인번호) : %s" % (cashbillInfo.confirmNum))
-    print ("ntssendDT (국세청 전송일시) : %s" % (cashbillInfo.ntssendDT))
-    print ("ntsresultDT (국세청 처리결과 수신일시) : %s" % (cashbillInfo.ntsresultDT))
-    print ("ntsresultCode (국세청 처리결과 상태코드) : %s" % (cashbillInfo.ntsresultCode))
-    print ("customerName (고객명) : %s" % (cashbillInfo.customerName))
-    print ("orgConfirmNum (원본 현금영수증 국세청 승인번호) : %s" % (cashbillInfo.orgConfirmNum))
-    print ("orgTradeDate (원본 현금영수증 거래일자) : %s" % (cashbillInfo.orgTradeDate))
-
-    print ("printYN (인쇄여부) : %s" % (cashbillInfo.printYN))
+    print("itemKey (아이템키) : %s" % (cashbillInfo.itemKey))
+    print("mgtKey (문서관리번호) : %s" % (cashbillInfo.mgtKey))
+    print("tradeDate (거래일자) : %s" % (cashbillInfo.tradeDate))
+    print("tradeType (문서형태) : %s" % (cashbillInfo.tradeType))
+    print("tradeUsage (거래구분) : %s" % (cashbillInfo.tradeUsage))
+    print("tradeOpt (거래유형) : %s" % (cashbillInfo.tradeOpt))
+    print("taxationType (과세형태) : %s" % (cashbillInfo.taxationType))
+    print("totalAmount (거래금액) : %s" % (cashbillInfo.totalAmount))
+    print("issueDT (발행일시) : %s" % (cashbillInfo.issueDT))
+    print("regDT (등록일시) : %s" % (cashbillInfo.regDT))
+    print("stateMemo (상태메모) : %s" % (cashbillInfo.stateMemo))
+    print("stateCode (상태코드) : %s" % (cashbillInfo.stateCode))
+    print("stateDT (상태변경일시) : %s" % (cashbillInfo.stateDT))
+    print("identityNum (거래처 식별번호) : %s" % (cashbillInfo.identityNum))
+    print("itemName (주문상품명) : %s" % (cashbillInfo.itemName))
+    print("customerName (주문자명) : %s" % (cashbillInfo.customerName))
+    print("confirmNum (국세청 승인번호) : %s" % (cashbillInfo.confirmNum))
+    print("orgConfirmNum (원본 현금영수증 국세청 승인번호) : %s" % (cashbillInfo.orgConfirmNum))
+    print("orgTradeDate (원본 현금영수증 거래일자) : %s" % (cashbillInfo.orgTradeDate))
+    print("ntssendDT (국세청 전송일시) : %s" % (cashbillInfo.ntssendDT))
+    print("ntsresultDT (국세청 처리결과 수신일시) : %s" % (cashbillInfo.ntsresultDT))
+    print("ntsresultCode (국세청 처리결과 상태코드) : %s" % (cashbillInfo.ntsresultCode))
+    print("ntsresultMessage (국세청 처리결과 메시지) : %s" % (cashbillInfo.ntsresultMessage))
+    print("printYN (인쇄여부) : %s" % (cashbillInfo.printYN))
 
 except PopbillException as PE:
-    print("Exception Occur : [%d] %s" % (PE.code , PE.message))
+    print("Exception Occur : [%d] %s" % (PE.code, PE.message))
