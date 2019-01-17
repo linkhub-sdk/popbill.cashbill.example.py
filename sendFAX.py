@@ -2,9 +2,12 @@
 # code for console Encoding difference. Dont' mind on it
 import sys
 import imp
+
 imp.reload(sys)
-try: sys.setdefaultencoding('UTF8')
-except Exception as E: pass
+try:
+    sys.setdefaultencoding('UTF8')
+except Exception as E:
+    pass
 
 import testValue
 
@@ -27,7 +30,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 현금영수증 문서관리번호
-    MgtKey = "20161123-01"
+    MgtKey = "20190117-001"
 
     # 발신번호
     Sender = "07043042991"
@@ -40,7 +43,7 @@ try:
 
     result = cashbillService.sendFAX(CorpNum, MgtKey, Sender, Receiver, UserID)
 
-    print("처리결과 : [%d] %s" % (result.code,result.message))
+    print("처리결과 : [%d] %s" % (result.code, result.message))
 
 except PopbillException as PE:
-    print("Exception Occur : [%d] %s" % (PE.code , PE.message))
+    print("Exception Occur : [%d] %s" % (PE.code, PE.message))

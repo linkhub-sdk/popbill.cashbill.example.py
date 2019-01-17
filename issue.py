@@ -2,9 +2,12 @@
 # code for console Encoding difference. Dont' mind on it
 import sys
 import imp
+
 imp.reload(sys)
-try: sys.setdefaultencoding('UTF8')
-except Exception as E: pass
+try:
+    sys.setdefaultencoding('UTF8')
+except Exception as E:
+    pass
 
 import testValue
 
@@ -27,14 +30,14 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 현금영수증 문서관리번호
-    MgtKey = "20161123-02"
+    MgtKey = "20190116-001"
 
     # 메모
     Memo = "발행 메모"
 
     result = cashbillService.issue(CorpNum, MgtKey, Memo)
 
-    print("처리결과 : [%d] %s" % (result.code,result.message))
+    print("처리결과 : [%d] %s" % (result.code, result.message))
 
 except PopbillException as PE:
-    print("Exception Occur : [%d] %s" % (PE.code , PE.message))
+    print("Exception Occur : [%d] %s" % (PE.code, PE.message))

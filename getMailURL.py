@@ -25,7 +25,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 현금영수증 문서관리번호
-    MgtKey = "20161118-01"
+    MgtKey = "20190116-001"
 
     url = cashbillService.getMailURL(CorpNum, MgtKey)
 

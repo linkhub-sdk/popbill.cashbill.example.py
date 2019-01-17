@@ -2,9 +2,12 @@
 # code for console Encoding difference. Dont' mind on it
 import sys
 import imp
+
 imp.reload(sys)
-try: sys.setdefaultencoding('UTF8')
-except Exception as E: pass
+try:
+    sys.setdefaultencoding('UTF8')
+except Exception as E:
+    pass
 
 import testValue
 
@@ -25,11 +28,11 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 현금영수증 문서관리번호, 1~24자리, 영문,숫자,-,_ 조합으로 공급자별 고유번호 생성
-    MgtKey = "20161122-01"
+    MgtKey = "20190116-01"
 
     bIsInUse = cashbillService.checkMgtKeyInUse(CorpNum, MgtKey)
 
     print("사용여부 : 사용중" if bIsInUse else "사용여부 : 미사용중")
 
 except PopbillException as PE:
-    print("Exception Occur : [%d] %s" % (PE.code , PE.message))
+    print("Exception Occur : [%d] %s" % (PE.code, PE.message))

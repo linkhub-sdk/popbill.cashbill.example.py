@@ -30,9 +30,9 @@ try:
 
     # 현금영수증 문서관리번호 배열, 최대 1000건
     MgtKeyList = []
-    MgtKeyList.append("20170718-04")
-    MgtKeyList.append("20161118-02")
-    MgtKeyList.append("20161118-03")
+    MgtKeyList.append("20190116-001")
+    MgtKeyList.append("20190116-002")
+    MgtKeyList.append("20190116-003")
 
     InfoList = cashbillService.getInfos(CorpNum, MgtKeyList)
 

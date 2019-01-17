@@ -20,7 +20,6 @@ cashbillService.IsTest = testValue.IsTest
 1건의 현금영수증을 수정합니다.
 - [임시저장] 상태의 현금영수증만 수정할 수 있습니다.
 - 국세청에 신고된 현금영수증은 수정할 수 없으며, 취소 현금영수증을 발행하여 취소처리 할 수 있습니다.
-- 취소현금영수증 작성방법 안내 - http://blog.linkhub.co.kr/702
 '''
 
 try:
@@ -30,13 +29,13 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 수정하고자하는 현금영수증 문서관리번호
-    MgtKey = '20161123-03'
+    MgtKey = '20190117-001'
 
     # 현금영수증 정보
     cashbill = Cashbill(
 
-        # 문서관리번호, 1~24자리, 영문,숫자,-,_ 조합으로 사업자별로 중복되지 않도록 구성
-        mgtKey="20161123-01",
+        # 문서관리번호
+        mgtKey=MgtKey,
 
         # 문서형태, '승인거래'/'취소거래'
         tradeType="승인거래",
@@ -54,7 +53,7 @@ try:
         # 거래유형이 '지출증빙용' - [휴대폰/카드/주민등록/사업자] 번호 입력
         # 거래유형이 '소득공제용' - [휴대폰/카드/주민등록] 번호 입력
         # 자진발급 "010-000-1234" 의 경우 "소득공제용"으로만 발급 가능
-        identityNum="6798700433",
+        identityNum="010-000-1234",
 
         # 공급가액
         supplyCost="15000",
@@ -69,7 +68,7 @@ try:
         totalAmount="20000",
 
         # 가맹점 사업자번호
-        franchiseCorpNum="1234567890",
+        franchiseCorpNum=CorpNum,
 
         # 가맹점 상호
         franchiseCorpName="가맹점 상호",

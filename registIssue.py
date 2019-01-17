@@ -21,7 +21,6 @@ cashbillService.IsTest = testValue.IsTest
 - 발행일 기준 오후 5시 이전에 발행된 현금영수증은 다음날 오후 2시에 국세청 전송결과를 확인할 수 있습니다.
 - 현금영수증 국세청 전송 정책에 대한 정보는 "[현금영수증 API 연동매뉴얼] > 1.4. 국세청 전송정책"을
   참조하시기 바랍니다.
-- 취소현금영수증 작성방법 안내 - http://blog.linkhub.co.kr/702
 '''
 
 try:
@@ -33,14 +32,11 @@ try:
     # 팝빌회원 아이디
     UserID = testValue.testUserID
 
-    # 즉시발행 메모
-    Memo = "현금영수증 즉시발행 메모"
-
     # 현금영수증 정보
     cashbill = Cashbill(
 
         # 문서관리번호, 1~24자리, 영문,숫자,-,_ 조합으로 사업자별로 중복되지 않도록 구성
-        mgtKey="20170718-09",
+        mgtKey="20190116-001",
 
         # 문서형태, '승인거래'/'취소거래'
         tradeType="승인거래",
@@ -79,7 +75,7 @@ try:
         totalAmount="11000",
 
         # 가맹점 사업자번호
-        franchiseCorpNum="1234567890",
+        franchiseCorpNum=CorpNum,
 
         # 가맹점 상호
         franchiseCorpName="가맹점 상호",
@@ -111,6 +107,9 @@ try:
         # 발행안내문자 전송여부
         smssendYN=False
     )
+
+    # 즉시발행 메모
+    Memo = "현금영수증 즉시발행 메모"
 
     result = cashbillService.registIssue(CorpNum, cashbill, Memo, UserID)
 

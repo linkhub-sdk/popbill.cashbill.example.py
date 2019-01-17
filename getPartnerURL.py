@@ -14,7 +14,7 @@ cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
 
 '''
-파트너 포인트 충전 URL을 반환합니다.
+파트너 포인트충전 팝업 URL을 반환합니다.
 - 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
 '''
 
@@ -24,7 +24,7 @@ try:
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
 
-    # CHRG-포인트충전
+    # CHRG-포인트 충전 URL
     TOGO = "CHRG"
 
     url = cashbillService.getPartnerURL(CorpNum, TOGO)

@@ -22,7 +22,6 @@ cashbillService.IsTest = testValue.IsTest
 - 발행일 기준 오후 5시 이전에 발행된 현금영수증은 다음날 오후 2시에 국세청 전송결과를 확인할 수 있습니다.
 - 현금영수증 국세청 전송 정책에 대한 정보는 "[현금영수증 API 연동매뉴얼] > 1.4. 국세청 전송정책"을
   참조하시기 바랍니다.
-- 취소현금영수증 작성방법 안내 - http://blog.linkhub.co.kr/702
 '''
 
 try:
@@ -35,7 +34,7 @@ try:
     cashbill = Cashbill(
 
         # 문서관리번호, 1~24자리, 영문,숫자,-,_ 조합으로 사업자별로 중복되지 않도록 구성
-        mgtKey="20161123-03",
+        mgtKey="20190116-001",
 
         # 문서형태, '승인거래'/'취소거래'
         tradeType="승인거래",
@@ -74,7 +73,7 @@ try:
         totalAmount="20000",
 
         # 가맹점 사업자번호
-        franchiseCorpNum="1234567890",
+        franchiseCorpNum=CorpNum,
 
         # 가맹점 상호
         franchiseCorpName="가맹점 상호",

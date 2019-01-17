@@ -2,9 +2,12 @@
 # code for console Encoding difference. Dont' mind on it
 import sys
 import imp
+
 imp.reload(sys)
-try: sys.setdefaultencoding('UTF8')
-except Exception as E: pass
+try:
+    sys.setdefaultencoding('UTF8')
+except Exception as E:
+    pass
 
 import testValue
 
@@ -22,7 +25,7 @@ cashbillService.IsTest = testValue.IsTest
 '''
 
 try:
-    print("=" * 15 + " 취소현금영수증 1건 즉시발행 "+ "=" * 15)
+    print("=" * 15 + " 취소현금영수증 1건 즉시발행 " + "=" * 15)
 
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
@@ -31,13 +34,13 @@ try:
     UserID = testValue.testUserID
 
     # 문서관리번호, 1~24자리, 영문,숫자,-,_ 조합으로 사업자별로 중복되지 않도록 구성
-    mgtKey = "20170817-42"
+    mgtKey = "20190117-002"
 
     # 원본현금영수증 국세청승인번호, 문서정보확인(GetInfo API)로 확인가능
-    orgConfirmNum = "820116333"
+    orgConfirmNum = "538588735"
 
     # 원본현금영수증 거래일자, 문서정보확인(GetInfo API)로 확인가능
-    orgTradeDate = "20170711"
+    orgTradeDate = "20190116"
 
     # 발행안내문자 전송여부
     smssendYN = False
@@ -47,7 +50,7 @@ try:
 
     result = cashbillService.revokeRegistIssue(CorpNum, mgtKey, orgConfirmNum, orgTradeDate, smssendYN, memo, UserID)
 
-    print("처리결과 : [%d] %s" % (result.code,result.message))
+    print("처리결과 : [%d] %s" % (result.code, result.message))
 
 except PopbillException as PE:
-    print("Exception Occur : [%d] %s" % (PE.code , PE.message))
+    print("Exception Occur : [%d] %s" % (PE.code, PE.message))
