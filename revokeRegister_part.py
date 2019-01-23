@@ -45,7 +45,7 @@ try:
     # 발행안내문자 전송여부
     smssendYN = False
 
-    # 부분취소여부, true-부분취소 / false-전체취소
+    # 부분취소여부, True-부분취소 / False-전체취소
     isPartCancel = True
 
     # 취소사유, 1-거래취소, 2-오류발급취소, 3-기타

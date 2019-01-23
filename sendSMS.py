@@ -29,7 +29,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 현금영수증 문서관리번호
-    MgtKey = "20190117-001"
+    MgtKey = "20190117-0"
 
     # 발신번호
     Sender = "07043042991"
