@@ -17,7 +17,7 @@ cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
 
 '''
-회사정보를 수정합니다.
+연동회원의 회사정보를 수정합니다.
 '''
 
 try:

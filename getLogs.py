@@ -30,12 +30,12 @@ try:
     i = 1
     for f in LogList:
         print("%d:" % i)
-        print("    docLogType(이력유형) : %s" % f.docLogType)
-        print("    log(문서이력 설명) : %s" % f.log)
-        print("    procType(처리유형) : %s" % f.procType)
-        print("    procCorpName(회사명) : %s" % f.procCorpName)
+        print("    docLogType(로그타입) : %s" % f.docLogType)
+        print("    log(이력정보) : %s" % f.log)
+        print("    procType(처리형태) : %s" % f.procType)
         print("    procMemo(처리메모) : %s" % f.procMemo)
         print("    regDT(처리일시) : %s" % f.regDT)
+        print("    ip(아이피) : %s" % f.ip)
         i += 1
 
 except PopbillException as PE:

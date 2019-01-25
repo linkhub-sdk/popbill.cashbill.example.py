@@ -17,12 +17,12 @@ cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
 
 '''
-1건의 현금영수증 인쇄팝업 URL을 반환합니다.
+1건의 현금영수증 인쇄(공급자) URL을 반환합니다.
 - 보안정책으로 인해 반환된 URL의 유효시간은 30초입니다.
 '''
 
 try:
-    print("=" * 15 + " 현금영수증 인쇄 팝업 URL " + "=" * 15)
+    print("=" * 15 + " 현금영수증 인쇄 팝업 URL(공급자용)" + "=" * 15)
 
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
@@ -33,6 +33,5 @@ try:
     url = cashbillService.getPrintURL(CorpNum, MgtKey)
 
     print("URL: %s" % url)
-
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))
