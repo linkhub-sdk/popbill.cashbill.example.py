@@ -25,7 +25,7 @@ cashbillService.IsTest = testValue.IsTest
 try:
     print("=" * 15 + " 현금영수증 발행 " + "=" * 15)
 
-    # 팝빌회원 사업자버놓
+    # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
 
     # 현금영수증 문서관리번호
