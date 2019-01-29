@@ -31,8 +31,8 @@ try:
     MgtKey = "20190116-001"
 
     cashbill = cashbillService.getDetailInfo(CorpNum, MgtKey)
-
-    print("mgtKey (현금영수증 문서관리번호) : %s" % cashbill.mgtKey)
+    print("\n==========현금영수증 정보==========>")
+    print("mgtKey (관리번호) : %s" % cashbill.mgtKey)
     print("confirmNum (국세청승인번호) : %s" % cashbill.confirmNum)
     print("orgConfirmNum (원본현금영수증 승인번호) : %s" % cashbill.orgConfirmNum)
     print("orgTradeDate (원본현금영수증 거래일자) : %s" % cashbill.orgTradeDate)
@@ -45,17 +45,23 @@ try:
     print("supplyCost (공급가액) : %s" % cashbill.supplyCost)
     print("tax (부가세) : %s" % cashbill.tax)
     print("serviceFee (봉사료) : %s" % cashbill.serviceFee)
+
+    print("\n발행자정보>")
     print("franchiseCorpNum (가맹점 사업자번호) : %s" % cashbill.franchiseCorpNum)
     print("franchiseCorpName (가맹점 상호) : %s" % cashbill.franchiseCorpName)
     print("franchiseCEOName (가맹점 대표자 성명) : %s" % cashbill.franchiseCEOName)
     print("franchiseAddr (가맹점 주소) : %s" % cashbill.franchiseAddr)
     print("franchiseTEL (가맹점 연락처) : %s" % cashbill.franchiseTEL)
+
+    print("\n거래처정보>")
     print("identityNum (거래처 식별번호) : %s" % cashbill.identityNum)
     print("customerName (주문자명) : %s" % cashbill.customerName)
     print("itemName (주문상품명) : %s" % cashbill.itemName)
     print("orderNumber (주문번호) : %s" % cashbill.orderNumber)
     print("email (이메일) : %s" % cashbill.email)
     print("hp (휴대폰번호) : %s" % cashbill.hp)
+
+    print("\n부가정보>")
     print("smssendYN (SMS 전송여부) : %s" % cashbill.smssendYN)
     print("cancelType (취소사유) : %s" % cashbill.cancelType)
 

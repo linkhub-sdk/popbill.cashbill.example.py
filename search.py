@@ -78,8 +78,9 @@ try:
     print("pageCount (페이지 개수) : %s \n" % response.pageCount)
 
     for cashbillInfo in response.list:
-        print("itemKey (아이템키) : %s" % cashbillInfo.itemKey)
-        print("mgtKey (문서관리번호) : %s" % cashbillInfo.mgtKey)
+        print("\n==========현금영수증 정보==========>")
+        print("itemKey (팝빌 관리번호) : %s" % cashbillInfo.itemKey)
+        print("mgtKey (관리번호) : %s" % cashbillInfo.mgtKey)
         print("tradeDate (거래일자) : %s" % cashbillInfo.tradeDate)
         print("tradeType (문서형태) : %s" % cashbillInfo.tradeType)
         print("tradeUsage (거래구분) : %s" % cashbillInfo.tradeUsage)
@@ -91,9 +92,13 @@ try:
         print("stateMemo (상태메모) : %s" % cashbillInfo.stateMemo)
         print("stateCode (상태코드) : %s" % cashbillInfo.stateCode)
         print("stateDT (상태변경일시) : %s" % cashbillInfo.stateDT)
+
+        print("\n거래처 정보>")
         print("identityNum (거래처 식별번호) : %s" % cashbillInfo.identityNum)
         print("itemName (주문상품명) : %s" % cashbillInfo.itemName)
         print("customerName (주문자명) : %s" % cashbillInfo.customerName)
+
+        print("\n국세청 정보>")
         print("confirmNum (국세청 승인번호) : %s" % cashbillInfo.confirmNum)
         print("ntssendDT (국세청 전송일시) : %s" % cashbillInfo.ntssendDT)
         print("ntsresultDT (국세청 처리결과 수신일시) : %s" % cashbillInfo.ntsresultDT)
@@ -101,6 +106,8 @@ try:
         print("customerName (고객명) : %s" % cashbillInfo.customerName)
         print("orgConfirmNum (원본 현금영수증 국세청 승인번호) : %s" % cashbillInfo.orgConfirmNum)
         print("orgTradeDate (원본 현금영수증 거래일자) : %s" % cashbillInfo.orgTradeDate)
+
+        print("\n부가 정보>")
         print("printYN (인쇄여부) : %s\n" % cashbillInfo.printYN)
 
 except PopbillException as PE:
