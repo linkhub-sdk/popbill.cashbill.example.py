@@ -29,9 +29,9 @@ try:
 
     # 문서관리번호 배열, 최대 100건
     MgtKeyList = []
-    MgtKeyList.append("20190116-01")
-    MgtKeyList.append("20190116-02")
-    MgtKeyList.append("20190116-03")
+    MgtKeyList.append("20190116-001")
+    MgtKeyList.append("20190116-002")
+    MgtKeyList.append("20190116-003")
 
     url = cashbillService.getMassPrintURL(CorpNum, MgtKeyList)
 

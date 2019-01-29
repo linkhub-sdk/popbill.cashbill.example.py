@@ -34,7 +34,7 @@ try:
         print("    log(이력정보) : %s" % f.log)
         print("    procType(처리형태) : %s" % f.procType)
         print("    procMemo(처리메모) : %s" % f.procMemo)
-        print("    regDT(처리일시) : %s" % f.regDT)
+        print("    regDT(등록일시) : %s" % f.regDT)
         print("    ip(아이피) : %s" % f.ip)
         i += 1
 
