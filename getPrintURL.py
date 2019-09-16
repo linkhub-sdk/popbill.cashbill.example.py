@@ -15,6 +15,7 @@ from popbill import CashbillService, PopbillException
 
 cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
+cashbillService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 '''
 1건의 현금영수증 인쇄(공급자) URL을 반환합니다.

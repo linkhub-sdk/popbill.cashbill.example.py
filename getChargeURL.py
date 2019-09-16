@@ -15,6 +15,7 @@ from popbill import CashbillService, PopbillException
 
 cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
+cashbillService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 '''
 팝빌 연동회원 포인트 충전 충전 URL을 반환합니다.

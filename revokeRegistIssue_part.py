@@ -15,6 +15,7 @@ from popbill import Cashbill, CashbillService, PopbillException
 
 cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
+cashbillService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 '''
 1건의 (부분) 취소현금영수증을 즉시발행합니다.

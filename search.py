@@ -15,6 +15,7 @@ from popbill import CashbillService, PopbillException
 
 cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
+cashbillService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 '''
 검색조건을 사용하여 현금영수증 목록을 조회합니다.

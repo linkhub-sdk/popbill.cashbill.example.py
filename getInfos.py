@@ -15,6 +15,7 @@ from popbill import CashbillService, PopbillException
 
 cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
+cashbillService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 '''
 다수건의 현금영수증 상태/요약 정보를 확인합니다. (최대 1000건)

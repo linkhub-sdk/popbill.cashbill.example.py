@@ -15,6 +15,7 @@ from popbill import ContactInfo, CashbillService, PopbillException
 
 cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
+cashbillService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 '''
 연동회원의 담당자 정보를 수정합니다.
