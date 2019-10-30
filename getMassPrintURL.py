@@ -28,7 +28,7 @@ try:
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
 
-    # 문서관리번호 배열, 최대 100건
+    # 문서번호 배열, 최대 100건
     MgtKeyList = []
     MgtKeyList.append("20190116-001")
     MgtKeyList.append("20190116-002")

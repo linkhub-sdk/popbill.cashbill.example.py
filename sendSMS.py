@@ -29,7 +29,7 @@ try:
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
 
-    # 현금영수증 문서관리번호
+    # 현금영수증 문서번호
     MgtKey = "20190117-0"
 
     # 발신번호

@@ -29,13 +29,13 @@ try:
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
 
-    # 수정하고자하는 현금영수증 문서관리번호
+    # 수정하고자하는 현금영수증 문서번호
     MgtKey = '20190117-001'
 
     # 현금영수증 정보
     cashbill = Cashbill(
 
-        # 문서관리번호
+        # 문서번호
         mgtKey=MgtKey,
 
         # 문서형태, '승인거래'/'취소거래'

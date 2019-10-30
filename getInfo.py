@@ -28,13 +28,13 @@ try:
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
 
-    # 현금영수증 문서관리번호
+    # 현금영수증 문서번호
     MgtKey = "20190116-001"
 
     cashbillInfo = cashbillService.getInfo(CorpNum, MgtKey)
     print("\n==========현금영수증 정보==========>")
     print("itemKey (팝빌 관리번호) : %s" % cashbillInfo.itemKey)
-    print("mgtKey (관리번호) : %s" % cashbillInfo.mgtKey)
+    print("mgtKey (문서번호) : %s" % cashbillInfo.mgtKey)
     print("tradeDate (거래일자) : %s" % cashbillInfo.tradeDate)
     print("tradeType (문서형태) : %s" % cashbillInfo.tradeType)
     print("tradeUsage (거래구분) : %s" % cashbillInfo.tradeUsage)
