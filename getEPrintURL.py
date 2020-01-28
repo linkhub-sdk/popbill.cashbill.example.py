@@ -20,6 +20,7 @@ cashbillService.IPRestrictOnOff = testValue.IPRestrictOnOff
 '''
 1건의 현금영수증 인쇄(공급받는자) URL을 반환합니다.
 - 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
+- https://docs.popbill.com/cashbill/python/api#GetPrintURL
 '''
 
 try:

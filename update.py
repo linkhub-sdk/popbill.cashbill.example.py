@@ -20,7 +20,7 @@ cashbillService.IPRestrictOnOff = testValue.IPRestrictOnOff
 '''
 1건의 현금영수증을 수정합니다.
 - [임시저장] 상태의 현금영수증만 수정할 수 있습니다.
-- 국세청에 신고된 현금영수증은 수정할 수 없으며, 취소 현금영수증을 발행하여 취소처리 할 수 있습니다.
+- https://docs.popbill.com/cashbill/python/api#Update
 '''
 
 try:

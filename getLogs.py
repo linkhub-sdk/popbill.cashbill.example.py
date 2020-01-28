@@ -17,6 +17,11 @@ cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
 cashbillService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
+'''
+현금영수증의 상태, 등록일시, 요청 IP, 처리담당자 등의 정보에 대한 변경이력을 확인합니다.
+- https://docs.popbill.com/cashbill/python/api#GetLogs
+'''
+
 try:
     print("=" * 15 + " 현금영수증 상태변경 이력 " + "=" * 15)
 

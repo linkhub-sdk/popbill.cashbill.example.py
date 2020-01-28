@@ -20,7 +20,7 @@ cashbillService.IPRestrictOnOff = testValue.IPRestrictOnOff
 '''
 [발행완료] 상태의 현금영수증을 [발행취소] 합니다.
 - 발행취소는 현금영수증을 국세청 신고하기 전까지만 가능하며, 신고된 현금영수증을 취소하기 위해서는 취소현금영수증을 발행해야 합니다.
-- 발행취소된 현금영수증에 사용된 문서번호를 재사용 하기 위해서는 삭제(Delete API)를 호출하여 해당 현금영수증을 삭제해야 합니다.
+- https://docs.popbill.com/cashbill/python/api#CancelIssue
 '''
 
 try:

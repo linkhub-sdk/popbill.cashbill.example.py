@@ -19,7 +19,7 @@ cashbillService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 '''
 검색조건을 사용하여 현금영수증 목록을 조회합니다.
-- 응답항목에 대한 자세한 사항은 "[현금영수증 API 연동매뉴얼] > 3.3.4. Search(목록 조회)" 을 참조하시기 바랍니다.
+- https://docs.popbill.com/cashbill/python/api#Search
 '''
 
 try:

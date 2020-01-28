@@ -20,6 +20,7 @@ cashbillService.IPRestrictOnOff = testValue.IPRestrictOnOff
 '''
 파트너 포인트충전 팝업 URL을 반환합니다.
 - 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
+- https://docs.popbill.com/cashbill/python/api#GetPartnerURL
 '''
 
 try:
