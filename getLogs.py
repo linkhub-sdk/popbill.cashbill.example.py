@@ -16,6 +16,8 @@ from popbill import CashbillService, PopbillException
 cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
 cashbillService.IPRestrictOnOff = testValue.IPRestrictOnOff
+cashbillService.UseStaticIP = testValue.UseStaticIP
+cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 현금영수증의 상태, 등록일시, 요청 IP, 처리담당자 등의 정보에 대한 변경이력을 확인합니다.

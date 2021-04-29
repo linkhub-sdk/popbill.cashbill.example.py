@@ -16,6 +16,8 @@ from popbill import Cashbill, CashbillService, PopbillException
 cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
 cashbillService.IPRestrictOnOff = testValue.IPRestrictOnOff
+cashbillService.UseStaticIP = testValue.UseStaticIP
+cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 1건의 현금영수증을 즉시발행합니다.
@@ -36,7 +38,7 @@ try:
     cashbill = Cashbill(
 
         # 문서번호, 1~24자리, 영문,숫자,-,_ 조합으로 사업자별로 중복되지 않도록 구성
-        mgtKey="20191025-012",
+        mgtKey="20210429-001",
 
         # 문서형태, '승인거래'/'취소거래'
         tradeType="승인거래",

@@ -16,6 +16,8 @@ from popbill import CashbillService, PopbillException
 cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
 cashbillService.IPRestrictOnOff = testValue.IPRestrictOnOff
+cashbillService.UseStaticIP = testValue.UseStaticIP
+cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 공급받는자 메일링크 URL을 반환합니다.

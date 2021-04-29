@@ -32,4 +32,8 @@ testUserID = "testkorea"
 # 발급토큰 IP 제한기능 활성화 여부 (권장-True)
 IPRestrictOnOff = True
 
+# 팝빌 API 서비스 고정 IP 사용여부(GA), true-사용, false-미사용, 기본값(false)
 UseStaticIP = False
+
+#로컬서버 시간 사용여부, 권장(True)
+UseLocalTimeYN = True

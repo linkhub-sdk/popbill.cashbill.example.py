@@ -16,6 +16,8 @@ from popbill import CashbillService, PopbillException
 cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
 cashbillService.IPRestrictOnOff = testValue.IPRestrictOnOff
+cashbillService.UseStaticIP = testValue.UseStaticIP
+cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 현금영수증 관련 메일전송 항목에 대한 전송여부를 수정합니다.
