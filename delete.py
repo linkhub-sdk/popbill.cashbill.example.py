@@ -33,7 +33,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 현금영수증 문서번호
-    MgtKey = "20190116-001"
+    MgtKey = "20210429-001"
 
     result = cashbillService.delete(CorpNum, MgtKey)
     print("처리결과 : [%d] %s" % (result.code, result.message))

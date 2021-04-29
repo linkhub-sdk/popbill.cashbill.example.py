@@ -31,7 +31,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 현금영수증 문서번호
-    MgtKey = "20190117-001"
+    MgtKey = "20210429-001"
 
     # 수신 메일주소
     # 팝빌 개발환경에서 테스트하는 경우에도 안내 메일이 전송되므로,

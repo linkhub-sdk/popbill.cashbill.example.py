@@ -31,7 +31,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 현금영수증 문서번호
-    MgtKey = "20200728-01"
+    MgtKey = "20210429-01"
 
     url = cashbillService.getPDFURL(CorpNum, MgtKey)
 

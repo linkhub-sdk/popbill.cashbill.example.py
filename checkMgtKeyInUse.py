@@ -32,7 +32,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 현금영수증 문서번호, 1~24자리, 영문,숫자,-,_ 조합으로 공급자별 고유번호 생성
-    MgtKey = "20190116-01"
+    MgtKey = "20210429-01"
 
     bIsInUse = cashbillService.checkMgtKeyInUse(CorpNum, MgtKey)
 
