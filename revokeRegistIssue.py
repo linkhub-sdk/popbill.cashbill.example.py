@@ -21,7 +21,7 @@ cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 1건의 취소현금영수증을 즉시발행합니다.
-- 발행일 기준 오후 5시 이전에 발행된 현금영수증은 다음날 오후 2시에 국세청 전송결과를 확인할 수 있습니다.
+- 현금영수증 국세청 전송 정책 : https://docs.popbill.com/cashbill/ntsSendPolicy?lang=python
 - https://docs.popbill.com/cashbill/python/api#RevokeRegistIssue
 '''
 
