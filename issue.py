@@ -32,7 +32,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 현금영수증 문서번호
-    MgtKey = "20210429-001"
+    MgtKey = "20211227-PY001R"
 
     # 메모
     Memo = "발행 메모"
@@ -40,6 +40,8 @@ try:
     result = cashbillService.issue(CorpNum, MgtKey, Memo)
 
     print("처리결과 : [%d] %s" % (result.code, result.message))
+    print("국세청 승인번호 : %s" % (result.confirmNum))
+    print("거래일자 : %s" % (result.tradeDate))
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))
