@@ -40,7 +40,7 @@ try:
 
     for cashbillInfo in InfoList:
         print("\n==========현금영수증 정보==========>")
-        print("itemKey (팝빌 관리번호) : %s" % cashbillInfo.itemKey)
+        print("itemKey (팝빌번호) : %s" % cashbillInfo.itemKey)
         print("mgtKey (문서번호) : %s" % cashbillInfo.mgtKey)
         print("tradeDate (거래일자) : %s" % cashbillInfo.tradeDate)
         print("tradeType (문서형태) : %s" % cashbillInfo.tradeType)
