@@ -32,7 +32,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 수정하고자하는 현금영수증 문서번호
-    MgtKey = '20190117-001'
+    MgtKey = '20211201-001'
 
     # 현금영수증 정보
     cashbill = Cashbill(
