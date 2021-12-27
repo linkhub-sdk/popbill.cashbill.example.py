@@ -37,10 +37,10 @@ try:
     DType = "R"
 
     # 시작일자, 표시형식(yyyyMMdd)
-    SDate = "20210401"
+    SDate = "20211201"
 
     # 종료일자, 표시형식(yyyyMMdd)
-    EDate = "20210430"
+    EDate = "20211230"
 
     # 상태코드 배열, 2,3번째 자리에 와일드카드(*) 사용 가능
     # 상태코드에 대한 자세한 사항은 "[현금영수증 API 연동매뉴얼] > 5.1 현금영수증 상태코드" 를 참조하시기 바랍니다.
@@ -70,8 +70,12 @@ try:
     # 거래유형 배열, N-일반, B-도서공연, T-대중교통
     TradeOpt = ["N", "B", "T"]
 
+    # 가맹점 종사업장 번호
+    # └ 다수건 검색시 콤마(",")로 구분. 예) 1234,1000
+    FranchiseTaxRegID = ""
+
     response = cashbillService.search(CorpNum, DType, SDate, EDate, State, TradeType,
-                                      TradeUsage, TaxationType, Page, PerPage, Order, UserID, QString, TradeOpt)
+                                      TradeUsage, TaxationType, Page, PerPage, Order, UserID, QString, TradeOpt, FranchiseTaxRegID)
 
     print("code (응답코드) : %s " % response.code)
     print("message (응답메시지) : %s " % response.message)

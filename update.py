@@ -32,7 +32,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 수정하고자하는 현금영수증 문서번호
-    MgtKey = '20211201-001'
+    MgtKey = '20211227-PY002R'
 
     # 현금영수증 정보
     cashbill = Cashbill(
@@ -72,6 +72,9 @@ try:
 
         # 가맹점 사업자번호
         franchiseCorpNum=CorpNum,
+
+        # 가맹점 종사업장 식별번호
+        franchiseTaxRegID="",
 
         # 가맹점 상호
         franchiseCorpName="가맹점 상호",

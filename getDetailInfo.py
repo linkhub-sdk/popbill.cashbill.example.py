@@ -31,7 +31,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 현금영수증 문서번호
-    MgtKey = "20210429-001"
+    MgtKey = "20211227-PY005"
 
     cashbill = cashbillService.getDetailInfo(CorpNum, MgtKey)
     print("\n==========현금영수증 정보==========>")
@@ -49,8 +49,9 @@ try:
     print("tax (부가세) : %s" % cashbill.tax)
     print("serviceFee (봉사료) : %s" % cashbill.serviceFee)
 
-    print("\n발행자정보>")
+    print("\n가맹점정보>")
     print("franchiseCorpNum (가맹점 사업자번호) : %s" % cashbill.franchiseCorpNum)
+    print("franchiseTaxRegID (가맹점 종사업장 식별번호) : %s" % cashbill.franchiseTaxRegID)
     print("franchiseCorpName (가맹점 상호) : %s" % cashbill.franchiseCorpName)
     print("franchiseCEOName (가맹점 대표자 성명) : %s" % cashbill.franchiseCEOName)
     print("franchiseAddr (가맹점 주소) : %s" % cashbill.franchiseAddr)

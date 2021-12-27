@@ -38,7 +38,7 @@ try:
     cashbill = Cashbill(
 
         # 문서번호, 1~24자리, 영문,숫자,-,_ 조합으로 사업자별로 중복되지 않도록 구성
-        mgtKey="20211227-PY004",
+        mgtKey="20211227-PY005",
 
         # 문서형태, '승인거래'/'취소거래'
         tradeType="승인거래",
@@ -78,6 +78,9 @@ try:
 
         # 가맹점 사업자번호
         franchiseCorpNum=CorpNum,
+
+        # 가맹점 종사업장 식별번호
+        franchiseTaxRegID="",
 
         # 가맹점 상호
         franchiseCorpName="가맹점 상호",
