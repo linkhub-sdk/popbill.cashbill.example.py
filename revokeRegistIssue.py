@@ -31,9 +31,6 @@ try:
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
 
-    # 팝빌회원 아이디
-    UserID = testValue.testUserID
-
     # 문서번호, 1~24자리, 영문,숫자,-,_ 조합으로 사업자별로 중복되지 않도록 구성
     mgtKey = "20220803-003"
 
@@ -49,7 +46,7 @@ try:
     # 즉시발행 메모
     memo = "현금영수증 즉시발행 메모"
 
-    result = cashbillService.revokeRegistIssue(CorpNum, mgtKey, orgConfirmNum, orgTradeDate, smssendYN, memo, UserID)
+    result = cashbillService.revokeRegistIssue(CorpNum, mgtKey, orgConfirmNum, orgTradeDate, smssendYN, memo)
 
     print("처리결과 : [%d] %s" % (result.code, result.message))
     print("국세청 승인번호 : %s" % (result.confirmNum))

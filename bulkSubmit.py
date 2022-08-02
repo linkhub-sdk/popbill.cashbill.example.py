@@ -34,9 +34,6 @@ try:
     #최대 36자리 영문, 숫자, '-' 조합으로 구성
     submitID = 'PYTHON-BULK'
 
-    # 팝빌회원 아이디
-    UserID = testValue.testUserID
-
     # 현금영수증 객체정보 리스트
     cashbillList = []
     for i in range(1, 101):
@@ -123,7 +120,7 @@ try:
             )
         )
 
-    bulkResponse = cashbillService.bulkSubmit(CorpNum, submitID, cashbillList, UserID)
+    bulkResponse = cashbillService.bulkSubmit(CorpNum, submitID, cashbillList)
 
     print("처리결과 : [%d] %s" % (bulkResponse.code, bulkResponse.message))
     print("접수번호 : %s" % (bulkResponse.receiptID))

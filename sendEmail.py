@@ -38,10 +38,7 @@ try:
     # 실제 거래처의 메일주소가 기재되지 않도록 주의
     Receiver = ""
 
-    # 팝빌회원 아이디
-    UserID = testValue.testUserID
-
-    result = cashbillService.sendEmail(CorpNum, MgtKey, Receiver, UserID)
+    result = cashbillService.sendEmail(CorpNum, MgtKey, Receiver)
 
     print("처리결과 : [%d] %s" % (result.code, result.message))
 except PopbillException as PE:

@@ -35,10 +35,7 @@ try:
     #최대 36자리 영문, 숫자, '-' 조합으로 구성
     submitID = 'PYTHONSHELL001'
 
-    # 팝빌회원 아이디
-    UserID = testValue.testUserID
-
-    bulkCashbillResult = cashbillService.getBulkResult(CorpNum, submitID, UserID)
+    bulkCashbillResult = cashbillService.getBulkResult(CorpNum, submitID)
 
     print("code (요청에 대한 응답 상태코드) : %s " % bulkCashbillResult.code)
     print("message (요청에 대한 응답 메시지) : %s " % bulkCashbillResult.message)

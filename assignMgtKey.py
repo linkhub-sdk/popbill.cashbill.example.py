@@ -38,10 +38,7 @@ try:
     # 사업자번호별 중복없는 고유번호 할당
     MgtKey = ""
 
-    # 팝빌회원 아이디
-    UserID = testValue.testUserID
-
-    result = cashbillService.assignMgtKey(CorpNum, ItemKey, MgtKey, UserID)
+    result = cashbillService.assignMgtKey(CorpNum, ItemKey, MgtKey)
 
     print("처리결과 : [%d] %s" % (result.code, result.message))
 except PopbillException as PE:

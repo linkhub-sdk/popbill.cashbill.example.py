@@ -44,10 +44,7 @@ try:
     # 메시지내용, 메시지 길이가 90Byte 초과시 길이가 조정되어 전송됨
     Contents = "현금영수증 문자메시지 전송 테스트"
 
-    # 팝빌회원 아이디
-    UserID = testValue.testUserID
-
-    result = cashbillService.sendSMS(CorpNum, MgtKey, Sender, Receiver, Contents, UserID)
+    result = cashbillService.sendSMS(CorpNum, MgtKey, Sender, Receiver, Contents)
     print("처리결과 : [%d] %s" % (result.code, result.message))
 
 except PopbillException as PE:
