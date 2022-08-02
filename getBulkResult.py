@@ -33,7 +33,7 @@ try:
 
     #제출아이디
     #최대 36자리 영문, 숫자, '-' 조합으로 구성
-    submitID = 'PYTHONSHELL001'
+    submitID = 'PYTHON-BULK'
 
     bulkCashbillResult = cashbillService.getBulkResult(CorpNum, submitID)
 
@@ -53,6 +53,7 @@ try:
     print("=" * 15 + " issueResult (발행결과) " + "=" * 15)
     for bulkCashbillIssueResult in bulkCashbillResult.issueResult:
         print("code (응답코드) : %s " % bulkCashbillIssueResult.code)
+        print("message (응답메시지) : %s " % bulkCashbillIssueResult.message)
         print("mgtKey (문서번호) : %s " % bulkCashbillIssueResult.mgtKey)
         print("confirmNum (국세청승인번호) : %s " % bulkCashbillIssueResult.confirmNum)
         print("tradeDate (거래일자) : %s " % bulkCashbillIssueResult.tradeDate)
