@@ -71,7 +71,7 @@ try:
         print("ntsresultMessage (국세청 처리결과 메시지) : %s" % cashbillInfo.ntsresultMessage)
 
         print("\n부가 정보>")
-        print("printYN (인쇄여부) : %s" % cashbillInfo.printYN) + '\n'
+        print("printYN (인쇄여부) : %s" % cashbillInfo.printYN + '\n')
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))

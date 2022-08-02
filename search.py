@@ -91,7 +91,7 @@ try:
     print("message (응답메시지) : %s " % response.message)
     print("total (검색결과 건수) : %s " % response.total)
     print("perPage (페이지당 검색개수) : %s " % response.perPage)
-    print("pageNum (페에지 번호) : %s " % response.pageNum)
+    print("pageNum (페이지 번호) : %s " % response.pageNum)
     print("pageCount (페이지 개수) : %s \n" % response.pageCount)
 
     for cashbillInfo in response.list:
