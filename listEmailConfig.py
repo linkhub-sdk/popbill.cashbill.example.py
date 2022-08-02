@@ -20,7 +20,7 @@ cashbillService.UseStaticIP = testValue.UseStaticIP
 cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
-현금영수증 관련 메일전송 항목에 대한 전송여부를 목록으로 반환합니다.
+현현금영수증 관련 메일 항목에 대한 발송설정을 확인합니다.
 - https://docs.popbill.com/cashbill/python/api#ListEmailConfig
 '''
 

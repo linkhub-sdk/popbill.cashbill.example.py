@@ -20,8 +20,8 @@ cashbillService.UseStaticIP = testValue.UseStaticIP
 cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
-공급받는자 메일링크 URL을 반환합니다.
-- 메일링크 URL은 유효시간이 존재하지 않습니다.
+현금영수증 안내메일의 상세보기 링크 URL을 반환합니다.
+- 함수 호출로 반환 받은 URL에는 유효시간이 없습니다.
 - https://docs.popbill.com/cashbill/python/api#GetMailURL
 '''
 
@@ -32,7 +32,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 현금영수증 문서번호
-    MgtKey = "20210429-001"
+    MgtKey = "20220803-001"
 
     url = cashbillService.getMailURL(CorpNum, MgtKey)
 

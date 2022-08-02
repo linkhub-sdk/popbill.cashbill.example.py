@@ -22,7 +22,6 @@ cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 '''
 1건의 임시저장 현금영수증을 발행처리합니다.
 - 현금영수증 국세청 전송 정책 : https://docs.popbill.com/cashbill/ntsSendPolicy?lang=python
-- https://docs.popbill.com/cashbill/python/api#CBIssue
 '''
 
 try:

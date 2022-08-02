@@ -20,7 +20,7 @@ cashbillService.UseStaticIP = testValue.UseStaticIP
 cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
-1건의 현금영수증 인쇄(공급자) URL을 반환합니다.
+현금영수증 1건을 인쇄하기 위한 페이지의 팝업 URL을 반환합니다.
 - 반환되는 URL은 보안 정책상 30초 동안 유효하며, 시간을 초과한 후에는 해당 URL을 통한 페이지 접근이 불가합니다.
 - https://docs.popbill.com/cashbill/python/api#GetPrintURL
 '''
@@ -32,7 +32,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 현금영수증 문서번호
-    MgtKey = "20210429-001"
+    MgtKey = "20220803-001"
 
     url = cashbillService.getPrintURL(CorpNum, MgtKey)
 

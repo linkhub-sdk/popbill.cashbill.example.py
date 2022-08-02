@@ -20,9 +20,9 @@ cashbillService.UseStaticIP = testValue.UseStaticIP
 cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
-알림문자를 전송합니다. (단문/SMS- 한글 최대 45자)
+현금영수증과 관련된 안내 SMS(단문) 문자를 재전송하는 함수로, 팝빌 사이트 [문자·팩스] > [문자] > [전송내역] 메뉴에서 전송결과를 확인 할 수 있습니다.
+- 메시지는 최대 90byte까지 입력 가능하고, 초과한 내용은 자동으로 삭제되어 전송합니다. (한글 최대 45자)
 - 알림문자 전송시 포인트가 차감됩니다. (전송실패시 환불처리)
-- 전송내역 확인은 [팝빌 로그인] > [문자 팩스] > [문자] > [전송내역] 탭에서 전송결과를 확인할 수 있습니다.
 - https://docs.popbill.com/cashbill/python/api#SendSMS
 '''
 
@@ -33,13 +33,13 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 현금영수증 문서번호
-    MgtKey = "20210429-0"
+    MgtKey = "20220803-001"
 
     # 발신번호
-    Sender = "07043042991"
+    Sender = ""
 
     # 수신번호
-    Receiver = "010111222"
+    Receiver = ""
 
     # 메시지내용, 메시지 길이가 90Byte 초과시 길이가 조정되어 전송됨
     Contents = "현금영수증 문자메시지 전송 테스트"

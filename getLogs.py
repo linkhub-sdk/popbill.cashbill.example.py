@@ -20,7 +20,7 @@ cashbillService.UseStaticIP = testValue.UseStaticIP
 cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
-현금영수증의 상태, 등록일시, 요청 IP, 처리담당자 등의 정보에 대한 변경이력을 확인합니다.
+현금영수증 상태에 대한 변경이력을 확인합니다.
 - https://docs.popbill.com/cashbill/python/api#GetLogs
 '''
 
@@ -31,7 +31,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 현금영수증 문서번호
-    MgtKey = "20210429-001"
+    MgtKey = "20220803-001"
 
     LogList = cashbillService.getLogs(CorpNum, MgtKey)
 

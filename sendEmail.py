@@ -20,7 +20,7 @@ cashbillService.UseStaticIP = testValue.UseStaticIP
 cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
-발행 안내메일을 재전송합니다.
+현금영수증과 관련된 안내 메일을 재전송 합니다.
 - https://docs.popbill.com/cashbill/python/api#SendEmail
 '''
 
@@ -31,12 +31,12 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 현금영수증 문서번호
-    MgtKey = "20210429-001"
+    MgtKey = "20220803-001"
 
     # 수신 메일주소
     # 팝빌 개발환경에서 테스트하는 경우에도 안내 메일이 전송되므로,
     # 실제 거래처의 메일주소가 기재되지 않도록 주의
-    Receiver = "test@test.com"
+    Receiver = ""
 
     # 팝빌회원 아이디
     UserID = testValue.testUserID

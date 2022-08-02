@@ -35,13 +35,13 @@ try:
     UserID = testValue.testUserID
 
     # 문서번호, 1~24자리, 영문,숫자,-,_ 조합으로 사업자별로 중복되지 않도록 구성
-    mgtKey = "20211227-PY001RVK"
+    mgtKey = "20220803-003"
 
     # 원본현금영수증 국세청승인번호, 문서정보확인(GetInfo API)로 확인가능
     orgConfirmNum = "TB0000253"
 
     # 원본현금영수증 거래일자, 문서정보확인(GetInfo API)로 확인가능
-    orgTradeDate = "20211223"
+    orgTradeDate = "20220801"
 
     # 발행안내문자 전송여부
     smssendYN = False

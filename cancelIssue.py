@@ -20,8 +20,8 @@ cashbillService.UseStaticIP = testValue.UseStaticIP
 cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
-[발행완료] 상태의 현금영수증을 [발행취소] 합니다.
-- 발행취소는 현금영수증을 국세청 신고하기 전까지만 가능하며, 신고된 현금영수증을 취소하기 위해서는 취소현금영수증을 발행해야 합니다.
+국세청 전송 이전 "발행완료" 상태의 현금영수증을 "발행취소"하고 국세청 전송 대상에서 제외합니다.
+- 삭제(Delete API) 함수를 호출하여 "발행취소" 상태의 현금영수증을 삭제하면, 문서번호 재사용이 가능합니다.
 - https://docs.popbill.com/cashbill/python/api#CancelIssue
 '''
 
@@ -32,7 +32,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 현금영수증 문서번호
-    MgtKey = "20210429-001"
+    MgtKey = "20220803-001"
 
     # 메모
     Memo = "발행취소 메모"

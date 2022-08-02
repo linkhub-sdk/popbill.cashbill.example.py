@@ -22,7 +22,6 @@ cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 '''
 1건의 현금영수증을 수정합니다.
 - [임시저장] 상태의 현금영수증만 수정할 수 있습니다.
-- https://docs.popbill.com/cashbill/python/api#Update
 '''
 
 try:
@@ -86,7 +85,7 @@ try:
         franchiseAddr="가맹점 주소",
 
         # 가맹점 연락처
-        franchiseTEL="07043042991",
+        franchiseTEL="",
 
         # 주문자명
         customerName="고객명",

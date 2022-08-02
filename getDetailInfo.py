@@ -20,7 +20,7 @@ cashbillService.UseStaticIP = testValue.UseStaticIP
 cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
-현금영수증 1건의 상세정보를 조회합니다.
+현금영수증 1건의 상세정보를 확인합니다.
 - https://docs.popbill.com/cashbill/python/api#GetDetailInfo
 '''
 
@@ -31,7 +31,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 현금영수증 문서번호
-    MgtKey = "20211227-PY005"
+    MgtKey = "20220803-001"
 
     cashbill = cashbillService.getDetailInfo(CorpNum, MgtKey)
     print("\n==========현금영수증 정보==========>")

@@ -51,12 +51,12 @@ try:
     print("txStartDT (발행처리 시작일시) : %s " % bulkCashbillResult.txStartDT)
     print("txEndDT (발행처리 완료일시) : %s " % bulkCashbillResult.txEndDT)
     print("receiptDT (접수일시) : %s " % bulkCashbillResult.receiptDT)
-    print("txEndDT (접수아이디) : %s " % bulkCashbillResult.txEndDT)
+    print("receiptID (접수아이디) : %s " % bulkCashbillResult.receiptID)
 
     print("=" * 15 + " issueResult (발행결과) " + "=" * 15)
     for bulkCashbillIssueResult in bulkCashbillResult.issueResult:
-        print("mgtKey (문서번호) : %s " % bulkCashbillIssueResult.mgtKey)
         print("code (응답코드) : %s " % bulkCashbillIssueResult.code)
+        print("mgtKey (문서번호) : %s " % bulkCashbillIssueResult.mgtKey)
         print("confirmNum (국세청승인번호) : %s " % bulkCashbillIssueResult.confirmNum)
         print("tradeDate (거래일자) : %s " % bulkCashbillIssueResult.tradeDate)
         print("*" * 50)
