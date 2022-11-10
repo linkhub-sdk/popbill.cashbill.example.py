@@ -45,6 +45,7 @@ try:
         print("itemKey (팝빌번호) : %s" % cashbillInfo.itemKey)
         print("mgtKey (문서번호) : %s" % cashbillInfo.mgtKey)
         print("tradeDate (거래일자) : %s" % cashbillInfo.tradeDate)
+        print("tradeDT (거래일시) : %s" % cashbillInfo.tradeDT)
         print("tradeType (문서형태) : %s" % cashbillInfo.tradeType)
         print("tradeUsage (거래구분) : %s" % cashbillInfo.tradeUsage)
         print("tradeOpt (거래유형) : %s" % cashbillInfo.tradeOpt)

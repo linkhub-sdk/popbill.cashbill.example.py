@@ -68,13 +68,21 @@ try:
 
     # [취소] 합계금액
     totalAmount = "4400"
+    
+    # 안내메일 제목, 공백처리시 기본양식으로 전송
+    emailSubject = "메일제목 테스트"
+
+    # 거래일시, 날짜(yyyyMMddHHmmss)
+    # 당일, 전일만 가능, 미입력시 기본값 발행일시 처리
+    tradeDT = "20221108000000"
 
     result = cashbillService.revokeRegistIssue(CorpNum, mgtKey, orgConfirmNum, orgTradeDate, smssendYN, memo, UserID,
-                                               isPartCancel, cancelType, supplyCost, tax, serviceFee, totalAmount)
+                                               isPartCancel, cancelType, supplyCost, tax, serviceFee, totalAmount, emailSubject, tradeDT)
 
     print("처리결과 : [%d] %s" % (result.code, result.message))
     print("국세청 승인번호 : %s" % (result.confirmNum))
     print("거래일자 : %s" % (result.tradeDate))
+    print("거래일시 : %s" % (result.tradeDT))
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))
