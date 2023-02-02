@@ -22,8 +22,8 @@ cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 '''
 현금영수증 1건의 상태 및 요약정보를 확인합니다.
 - 리턴값 'CashbillInfo'의 변수 'stateCode'를 통해 현금영수증의 상태코드를 확인합니다.
-- 현금영수증 상태코드 : [https://docs.popbill.com/cashbill/stateCode?lang=python]
-- https://docs.popbill.com/cashbill/python/api#GetInfo
+- 현금영수증 상태코드 : [https://developers.popbill.com/reference/cashbill/$2/response-code#state-code]
+- https://developers.popbill.com/reference/cashbill/python/api/info#GetInfo
 '''
 
 try:

@@ -22,7 +22,7 @@ cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 """
 접수시 기재한 SubmitID를 사용하여 현금영수증 접수결과를 확인합니다.
 - 개별 현금영수증 처리상태는 접수상태(txState)가 완료(2) 시 반환됩니다.
-- https://docs.popbill.com/cashbill/python/api#GetBulkResult
+- https://developers.popbill.com/reference/cashbill/python/api/issue#GetBulkResult
 """
 
 try:

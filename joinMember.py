@@ -18,7 +18,7 @@ cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 사용자를 연동회원으로 가입처리합니다.
-- https://docs.popbill.com/cashbill/python/api#JoinMember
+- https://developers.popbill.com/reference/cashbill/python/api/member#JoinMember
 '''
 
 try:

@@ -21,7 +21,7 @@ cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 연동회원의 회사정보를 확인합니다.
-- https://docs.popbill.com/cashbill/python/api#GetCorpInfo
+- https://developers.popbill.com/reference/cashbill/python/api/member#GetCorpInfo
 '''
 
 try:

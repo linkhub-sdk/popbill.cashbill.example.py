@@ -22,7 +22,7 @@ cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 팝빌 사이트를 통해 발행하여 문서번호가 부여되지 않은 현금영수증에 문서번호를 할당합니다.
-- https://docs.popbill.com/cashbill/python/api#AssignMgtKey
+- https://developers.popbill.com/reference/cashbill/python/api/etc#AssignMgtKey
 '''
 
 try:

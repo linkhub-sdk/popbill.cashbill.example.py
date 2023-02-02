@@ -21,7 +21,7 @@ cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 현금영수증 발행단가를 확인합니다.
-- https://docs.popbill.com/cashbill/python/api#GetUnitCost
+- https://developers.popbill.com/reference/cashbill/python/api/point#GetUnitCost
 '''
 
 try:

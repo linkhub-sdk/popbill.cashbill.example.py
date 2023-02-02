@@ -21,7 +21,7 @@ cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 현금영수증과 관련된 안내 메일을 재전송 합니다.
-- https://docs.popbill.com/cashbill/python/api#SendEmail
+- https://developers.popbill.com/reference/cashbill/python/api/etc#SendEmail
 '''
 
 try:

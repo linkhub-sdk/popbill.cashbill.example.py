@@ -21,7 +21,7 @@ cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 """
 최대 100건의 현금영수증 발행을 한번의 요청으로 접수합니다.
-- https://docs.popbill.com/cashbill/python/api#BulkSubmit
+- https://developers.popbill.com/reference/cashbill/python/api/issue#BulkSubmit
 """
 
 try:
