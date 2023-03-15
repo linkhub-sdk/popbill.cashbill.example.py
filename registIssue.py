@@ -108,7 +108,7 @@ try:
 
         # 발행안내문자 전송여부
         smssendYN=False,
-        
+
         # 거래일시, 날짜(yyyyMMddHHmmss)
         # 당일, 전일만 가능, 미입력시 기본값 발행일시 처리
         tradeDT = "20221108000000"
@@ -125,7 +125,6 @@ try:
     print("처리결과 : [%d] %s" % (result.code, result.message))
     print("국세청 승인번호 : %s" % (result.confirmNum))
     print("거래일자 : %s" % (result.tradeDate))
-    print("거래일시 : %s" % (result.tradeDT))
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))
