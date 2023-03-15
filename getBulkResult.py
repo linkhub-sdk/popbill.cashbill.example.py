@@ -57,6 +57,7 @@ try:
         print("mgtKey (문서번호) : %s " % bulkCashbillIssueResult.mgtKey)
         print("confirmNum (국세청승인번호) : %s " % bulkCashbillIssueResult.confirmNum)
         print("tradeDate (거래일자) : %s " % bulkCashbillIssueResult.tradeDate)
+        print("issueDT (발행일시) : %s " % bulkCashbillIssueResult.issueDT)
         print("*" * 50)
 
 except PopbillException as PE:
