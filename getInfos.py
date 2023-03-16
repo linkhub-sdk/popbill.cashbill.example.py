@@ -53,7 +53,6 @@ try:
         print("totalAmount (거래금액) : %s" % cashbillInfo.totalAmount)
         print("issueDT (발행일시) : %s" % cashbillInfo.issueDT)
         print("regDT (등록일시) : %s" % cashbillInfo.regDT)
-        print("stateMemo (상태메모) : %s" % cashbillInfo.stateMemo)
         print("stateCode (상태코드) : %s" % cashbillInfo.stateCode)
         print("stateDT (상태변경일시) : %s" % cashbillInfo.stateDT)
 

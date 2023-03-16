@@ -107,7 +107,6 @@ try:
         print("totalAmount (거래금액) : %s" % cashbillInfo.totalAmount)
         print("issueDT (발행일시) : %s" % cashbillInfo.issueDT)
         print("regDT (등록일시) : %s" % cashbillInfo.regDT)
-        print("stateMemo (상태메모) : %s" % cashbillInfo.stateMemo)
         print("stateCode (상태코드) : %s" % cashbillInfo.stateCode)
         print("stateDT (상태변경일시) : %s" % cashbillInfo.stateDT)
 
@@ -122,8 +121,10 @@ try:
         print("ntsresultDT (국세청 처리결과 수신일시) : %s" % cashbillInfo.ntsresultDT)
         print("ntsresultCode (국세청 처리결과 상태코드) : %s" % cashbillInfo.ntsresultCode)
         print("customerName (고객명) : %s" % cashbillInfo.customerName)
-        print("orgConfirmNum (원본 현금영수증 국세청 승인번호) : %s" % cashbillInfo.orgConfirmNum)
-        print("orgTradeDate (원본 현금영수증 거래일자) : %s" % cashbillInfo.orgTradeDate)
+        if TradeType == "C":
+            print("orgConfirmNum (원본 현금영수증 국세청 승인번호) : %s" % cashbillInfo.orgConfirmNum)
+            print("orgTradeDate (원본 현금영수증 거래일자) : %s" % cashbillInfo.orgTradeDate)
+        print("interOPYN (연동문서 여부) : %s" % cashbillInfo.interOPYN)
 
         print("\n부가 정보>")
         print("printYN (인쇄여부) : %s\n" % cashbillInfo.printYN)
