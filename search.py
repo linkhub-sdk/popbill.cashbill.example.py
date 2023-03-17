@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,10 +19,10 @@ cashbillService.IPRestrictOnOff = testValue.IPRestrictOnOff
 cashbillService.UseStaticIP = testValue.UseStaticIP
 cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 검색조건을 사용하여 현금영수증 목록을 조회합니다. (조회기간 단위 : 최대 6개월)
 - https://developers.popbill.com/reference/cashbill/python/api/info#Search
-'''
+"""
 
 try:
     print("=" * 15 + " 현금영수증 목록 조회 " + "=" * 15)
@@ -84,8 +84,23 @@ try:
     # - 미입력시 전체조회
     FranchiseTaxRegID = ""
 
-    response = cashbillService.search(CorpNum, DType, SDate, EDate, State, TradeType,
-                                      TradeUsage, TaxationType, Page, PerPage, Order, UserID, QString, TradeOpt, FranchiseTaxRegID)
+    response = cashbillService.search(
+        CorpNum,
+        DType,
+        SDate,
+        EDate,
+        State,
+        TradeType,
+        TradeUsage,
+        TaxationType,
+        Page,
+        PerPage,
+        Order,
+        UserID,
+        QString,
+        TradeOpt,
+        FranchiseTaxRegID,
+    )
 
     print("code (응답코드) : %s " % response.code)
     print("message (응답메시지) : %s " % response.message)

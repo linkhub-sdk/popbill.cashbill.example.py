@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,10 +19,10 @@ cashbillService.IPRestrictOnOff = testValue.IPRestrictOnOff
 cashbillService.UseStaticIP = testValue.UseStaticIP
 cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 현금영수증 관련 메일 항목에 대한 발송설정을 확인합니다.
 - https://developers.popbill.com/reference/cashbill/python/api/etc#ListEmailConfig
-'''
+"""
 
 try:
     print("=" * 15 + " 현금영수증 메일전송여부 확인" + "=" * 15)
@@ -34,9 +34,15 @@ try:
 
     for info in EmailConfig:
         if info.emailType == "CSH_ISSUE":
-            print("%s(고객에게 현금영수증이 발행 되었음을 알려주는 메일 전송 여부) : %s" % (info.emailType, info.sendYN))
+            print(
+                "%s(고객에게 현금영수증이 발행 되었음을 알려주는 메일 전송 여부) : %s"
+                % (info.emailType, info.sendYN)
+            )
         if info.emailType == "CSH_CANCEL":
-            print("%s(고객에게 현금영수증이 발행취소 되었음을 알려주는 메일 전송 여부) : %s" % (info.emailType, info.sendYN))
+            print(
+                "%s(고객에게 현금영수증이 발행취소 되었음을 알려주는 메일 전송 여부) : %s"
+                % (info.emailType, info.sendYN)
+            )
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))

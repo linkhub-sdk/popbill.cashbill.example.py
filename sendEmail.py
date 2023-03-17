@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,10 +19,10 @@ cashbillService.IPRestrictOnOff = testValue.IPRestrictOnOff
 cashbillService.UseStaticIP = testValue.UseStaticIP
 cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 현금영수증과 관련된 안내 메일을 재전송 합니다.
 - https://developers.popbill.com/reference/cashbill/python/api/etc#SendEmail
-'''
+"""
 
 try:
     print("=" * 15 + " 현금영수증 안내메일 재전송 " + "=" * 15)

@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,10 +19,10 @@ cashbillService.IPRestrictOnOff = testValue.IPRestrictOnOff
 cashbillService.UseStaticIP = testValue.UseStaticIP
 cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 연동회원의 잔여포인트를 확인합니다.
 - https://developers.popbill.com/reference/cashbill/python/api/point#GetBalance
-'''
+"""
 
 try:
     print("=" * 15 + " 연동회원 잔여포인트 확인 " + "=" * 15)

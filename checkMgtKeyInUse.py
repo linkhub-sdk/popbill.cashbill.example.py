@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,11 +19,11 @@ cashbillService.IPRestrictOnOff = testValue.IPRestrictOnOff
 cashbillService.UseStaticIP = testValue.UseStaticIP
 cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 파트너가 현금영수증 관리 목적으로 할당하는 문서번호 사용여부를 확인합니다.
 - 이미 사용 중인 문서번호는 중복 사용이 불가하고, 현금영수증이 삭제된 경우에만 문서번호의 재사용이 가능합니다.
 - https://developers.popbill.com/reference/cashbill/python/api/info#CheckMgtKeyInUse
-'''
+"""
 
 try:
     print("=" * 15 + " 문서번호 사용여부 확인 " + "=" * 15)

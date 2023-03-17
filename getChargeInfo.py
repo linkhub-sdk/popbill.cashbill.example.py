@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,10 +19,10 @@ cashbillService.IPRestrictOnOff = testValue.IPRestrictOnOff
 cashbillService.UseStaticIP = testValue.UseStaticIP
 cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 팝빌 현금영수증 API 서비스 과금정보를 확인합니다.
 - https://developers.popbill.com/reference/cashbill/python/api/point#GetChargeInfo
-'''
+"""
 
 try:
     print("=" * 15 + " 과금정보 확인 " + "=" * 15)

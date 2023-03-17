@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -31,9 +31,9 @@ try:
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
 
-    #제출아이디
-    #최대 36자리 영문, 숫자, '-' 조합으로 구성
-    submitID = 'PYTHON-BULK'
+    # 제출아이디
+    # 최대 36자리 영문, 숫자, '-' 조합으로 구성
+    submitID = "PYTHON-BULK"
 
     bulkCashbillResult = cashbillService.getBulkResult(CorpNum, submitID)
 

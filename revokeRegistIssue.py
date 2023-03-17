@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,13 +19,13 @@ cashbillService.IPRestrictOnOff = testValue.IPRestrictOnOff
 cashbillService.UseStaticIP = testValue.UseStaticIP
 cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 취소 현금영수증 데이터를 팝빌에 저장과 동시에 발행하여 "발행완료" 상태로 처리합니다.
 - 취소 현금영수증의 금액은 원본 금액을 넘을 수 없습니다.
 - 현금영수증 국세청 전송 정책 [https://developers.popbill.com/guide/cashbill/python/introduction/policy-of-send-to-nts]
 - 취소 현금영수증 발행 시 구매자 메일주소로 발행 안내 베일이 전송되니 유의하시기 바랍니다.
 - https://developers.popbill.com/reference/cashbill/python/api/issue#RevokeRegistIssue
-'''
+"""
 
 try:
     print("=" * 15 + " 취소현금영수증 1건 즉시발행 " + "=" * 15)
@@ -48,7 +48,9 @@ try:
     # 즉시발행 메모
     memo = "현금영수증 즉시발행 메모"
 
-    result = cashbillService.revokeRegistIssue(CorpNum, mgtKey, orgConfirmNum, orgTradeDate, smssendYN, memo)
+    result = cashbillService.revokeRegistIssue(
+        CorpNum, mgtKey, orgConfirmNum, orgTradeDate, smssendYN, memo
+    )
 
     print("처리결과 : [%d] %s" % (result.code, result.message))
     print("국세청 승인번호 : %s" % (result.confirmNum))

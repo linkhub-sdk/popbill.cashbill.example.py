@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,12 +19,12 @@ cashbillService.IPRestrictOnOff = testValue.IPRestrictOnOff
 cashbillService.UseStaticIP = testValue.UseStaticIP
 cashbillService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 현금영수증 1건의 상태 및 요약정보를 확인합니다.
 - 리턴값 'CashbillInfo'의 변수 'stateCode'를 통해 현금영수증의 상태코드를 확인합니다.
 - 현금영수증 상태코드 : [https://developers.popbill.com/reference/cashbill/python/response-code#state-code]
 - https://developers.popbill.com/reference/cashbill/python/api/info#GetInfo
-'''
+"""
 
 try:
     print("=" * 15 + " 현금영수증 상태/요약 정보 확인 " + "=" * 15)
