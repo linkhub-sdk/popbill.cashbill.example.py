@@ -71,6 +71,7 @@ try:
 
         print("\n부가 정보>")
         print("printYN (인쇄여부) : %s" % cashbillInfo.printYN + "\n")
+        print("interOPYN (연동문서 여부) : %s" % cashbillInfo.interOPYN)
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))

@@ -138,10 +138,10 @@ try:
         if TradeType == "C":
             print("orgConfirmNum (원본 현금영수증 국세청 승인번호) : %s" % cashbillInfo.orgConfirmNum)
             print("orgTradeDate (원본 현금영수증 거래일자) : %s" % cashbillInfo.orgTradeDate)
-        print("interOPYN (연동문서 여부) : %s" % cashbillInfo.interOPYN)
 
         print("\n부가 정보>")
         print("printYN (인쇄여부) : %s\n" % cashbillInfo.printYN)
+        print("interOPYN (연동문서 여부) : %s" % cashbillInfo.interOPYN)
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))
