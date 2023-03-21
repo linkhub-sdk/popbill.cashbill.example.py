@@ -83,23 +83,7 @@ try:
     # - 미입력시 전체조회
     FranchiseTaxRegID = ""
 
-    response = cashbillService.search(
-        CorpNum,
-        DType,
-        SDate,
-        EDate,
-        State,
-        TradeType,
-        TradeUsage,
-        TaxationType,
-        Page,
-        PerPage,
-        Order,
-        UserID,
-        QString,
-        TradeOpt,
-        FranchiseTaxRegID,
-    )
+    response = cashbillService.search(CorpNum,DType,SDate,EDate,State,TradeType,TradeUsage,TaxationType,Page,PerPage,Order,UserID,QString,TradeOpt,FranchiseTaxRegID)
 
     print("code (응답코드) : %s " % response.code)
     print("message (응답메시지) : %s " % response.message)

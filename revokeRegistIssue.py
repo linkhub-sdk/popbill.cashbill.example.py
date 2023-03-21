@@ -47,9 +47,7 @@ try:
     # 즉시발행 메모
     memo = "현금영수증 즉시발행 메모"
 
-    result = cashbillService.revokeRegistIssue(
-        CorpNum, mgtKey, orgConfirmNum, orgTradeDate, smssendYN, memo
-    )
+    result = cashbillService.revokeRegistIssue(CorpNum, mgtKey, orgConfirmNum, orgTradeDate, smssendYN, memo)
 
     print("처리결과 : [%d] %s" % (result.code, result.message))
     print("국세청 승인번호 : %s" % (result.confirmNum))

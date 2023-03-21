@@ -75,23 +75,7 @@ try:
     # 당일, 전일만 가능, 미입력시 기본값 발행일시 처리
     tradeDT = "20221108000000"
 
-    result = cashbillService.revokeRegistIssue(
-        CorpNum,
-        mgtKey,
-        orgConfirmNum,
-        orgTradeDate,
-        smssendYN,
-        memo,
-        UserID,
-        isPartCancel,
-        cancelType,
-        supplyCost,
-        tax,
-        serviceFee,
-        totalAmount,
-        emailSubject,
-        tradeDT,
-    )
+    result = cashbillService.revokeRegistIssue(CorpNum,mgtKey,orgConfirmNum,orgTradeDate,smssendYN,memo,UserID,isPartCancel,cancelType,supplyCost,tax,serviceFee,totalAmount,emailSubject,tradeDT)
 
     print("처리결과 : [%d] %s" % (result.code, result.message))
     print("국세청 승인번호 : %s" % (result.confirmNum))
