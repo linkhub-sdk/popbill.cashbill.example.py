@@ -32,7 +32,7 @@ try:
     # 팝빌회원 팝빌 아이디
     UserID = testValue.testUserID
 
-    refundableBalance = cashbillService.GetRefundableBalance(CorpNum, UserID)
+    refundableBalance = cashbillService.getRefundableBalance(CorpNum, UserID)
 
     print(" refundableBalance (환불 가능한 포인트) : %s" % refundableBalance)
 

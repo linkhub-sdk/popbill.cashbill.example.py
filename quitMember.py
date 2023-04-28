@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 # code for console Encoding difference. Dont' mind on it
+from popbill import CashbillService, PopbillException
+import testValue
 import imp
 import sys
 
@@ -9,8 +11,6 @@ try:
 except Exception as E:
     pass
 
-import testValue
-from popbill import CashbillService, PopbillException
 
 cashbillService = CashbillService(testValue.LinkID, testValue.SecretKey)
 cashbillService.IsTest = testValue.IsTest
@@ -38,9 +38,10 @@ try:
     # 팝빌회원 팝빌 아이디
     UserID = testValue.testUserID
 
-    response = cashbillService.QuitRequest(CorpNum, QuitReason, UserID)
+    response = cashbillService.quitMember(CorpNum, QuitReason, UserID)
 
-    print(" refundableBalance (환불 가능 포인트) : %s" % response.refundableBalance)
+    print("code (응답 코드) : %s" % response.code)
+    print("message (응답 메시지) : %s" % response.message)
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))
