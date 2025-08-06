@@ -37,11 +37,6 @@ try:
                 "%s(고객에게 현금영수증이 발행 되었음을 알려주는 메일 전송 여부) : %s"
                 % (info.emailType, info.sendYN)
             )
-        if info.emailType == "CSH_CANCEL":
-            print(
-                "%s(고객에게 현금영수증이 발행취소 되었음을 알려주는 메일 전송 여부) : %s"
-                % (info.emailType, info.sendYN)
-            )
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))

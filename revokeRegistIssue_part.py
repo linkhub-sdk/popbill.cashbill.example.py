@@ -38,10 +38,10 @@ try:
     # 문서번호, 1~24자리, 영문,숫자,-,_ 조합으로 사업자별로 중복되지 않도록 구성
     mgtKey = "20220803-002"
 
-    # 원본현금영수증 국세청승인번호, 문서정보확인(GetInfo API)로 확인가능
+    # 당초 승인 현금영수증 국세청승인번호, 문서정보확인(GetInfo API)로 확인가능
     orgConfirmNum = "TB0000253"
 
-    # 원본현금영수증 거래일자, 문서정보확인(GetInfo API)로 확인가능
+    # 당초 승인 현금영수증 거래일자, 문서정보확인(GetInfo API)로 확인가능
     orgTradeDate = "20220801"
 
     # 발행안내문자 전송여부
@@ -73,7 +73,7 @@ try:
 
     # 거래일시, 날짜(yyyyMMddHHmmss)
     # 당일, 전일만 가능, 미입력시 기본값 발행일시 처리
-    tradeDT = "20221108000000"
+    tradeDT = ""
 
     result = cashbillService.revokeRegistIssue(CorpNum,mgtKey,orgConfirmNum,orgTradeDate,smssendYN,memo,UserID,isPartCancel,cancelType,supplyCost,tax,serviceFee,totalAmount,emailSubject,tradeDT)
 

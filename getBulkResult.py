@@ -36,13 +36,13 @@ try:
 
     bulkCashbillResult = cashbillService.getBulkResult(CorpNum, submitID)
 
-    print("code (요청에 대한 응답 상태코드) : %s " % bulkCashbillResult.code)
-    print("message (요청에 대한 응답 메시지) : %s " % bulkCashbillResult.message)
+    print("code (API 처리에 대한 응답코드) : %s " % bulkCashbillResult.code)
+    print("message (API 처리에 대한 응답메시지) : %s " % bulkCashbillResult.message)
     print("submitID (제출아이디) : %s " % bulkCashbillResult.submitID)
     print("submitCount (현금영수증 접수 건수) : %s " % bulkCashbillResult.submitCount)
     print("successCount (현금영수증 발행 성공 건수) : %s " % bulkCashbillResult.successCount)
     print("failCount (현금영수증 발행 실패 건수) : %s " % bulkCashbillResult.failCount)
-    print("txState (접수상태코드) : %s " % bulkCashbillResult.txState)
+    print("txState (접수코드) : %s " % bulkCashbillResult.txState)
     print("txResultCode (접수 결과코드) : %s " % bulkCashbillResult.txResultCode)
     print("txStartDT (발행처리 시작일시) : %s " % bulkCashbillResult.txStartDT)
     print("txEndDT (발행처리 완료일시) : %s " % bulkCashbillResult.txEndDT)

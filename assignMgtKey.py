@@ -40,5 +40,6 @@ try:
     result = cashbillService.assignMgtKey(CorpNum, ItemKey, MgtKey)
 
     print("처리결과 : [%d] %s" % (result.code, result.message))
+
 except PopbillException as PE:
     print("Popbill Exception : [%d] %s" % (PE.code, PE.message))
